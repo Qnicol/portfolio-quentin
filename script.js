@@ -1,9 +1,12 @@
 const pageKey = document.body.dataset.page || "home";
-const isHomePage = pageKey === "home";
 
 const getInitialActiveNavKey = () => {
   if (pageKey === "portfolio") {
     return "portfolio";
+  }
+
+  if (pageKey === "expertises") {
+    return "expertises";
   }
 
   if (pageKey === "about") {
@@ -18,10 +21,6 @@ const getInitialActiveNavKey = () => {
     return "portfolio";
   }
 
-  if (window.location.hash === "#competences-panel") {
-    return "expertises";
-  }
-
   if (window.location.hash === "#apropos") {
     return "about";
   }
@@ -32,101 +31,6 @@ const getInitialActiveNavKey = () => {
 
   return null;
 };
-
-const buildSharedNavigation = () => {
-  const navSlot = document.querySelector("[data-site-nav]");
-
-  if (!navSlot) {
-    return;
-  }
-
-  const activeKey = getInitialActiveNavKey();
-  const brandHref = isHomePage ? "#accueil" : "index.html";
-  const navItems = [
-    {
-      key: "portfolio",
-      label: "Portfolio",
-      href: isHomePage ? "#projets" : "experience-professionnelle.html",
-    },
-    {
-      key: "expertises",
-      label: "Expertises",
-      href: isHomePage ? "#competences-panel" : "index.html#competences-panel",
-      openServices: isHomePage,
-    },
-    {
-      key: "about",
-      label: "\u00c0 propos",
-      href: isHomePage ? "#apropos" : "certification.html",
-    },
-    {
-      key: "contact",
-      label: "Contact",
-      href: isHomePage ? "#contact-section" : "contact.html",
-    },
-    {
-      key: "cv",
-      label: "CV",
-      href: "docs/quentin-nicol-cv.pdf",
-      cta: true,
-      external: true,
-    },
-  ];
-
-  const linksMarkup = navItems
-    .map((item) => {
-      const classes = item.cta ? ' class="topnav__cta"' : "";
-      const activeAttr =
-        !item.cta && activeKey && item.key === activeKey ? ' aria-current="page"' : "";
-      const externalAttrs = item.external ? ' target="_blank" rel="noreferrer"' : "";
-      const servicesAttr = item.openServices ? " data-open-services" : "";
-
-      return `
-        <a
-          ${classes}
-          href="${item.href}"
-          data-nav-link
-          data-nav-key="${item.key}"${servicesAttr}${activeAttr}${externalAttrs}
-        >
-          ${item.label}
-        </a>
-      `;
-    })
-    .join("");
-
-  navSlot.innerHTML = `
-    <header class="topbar reveal" data-mobile-nav>
-      <div class="topbar__primary">
-        <a class="brand" href="${brandHref}" aria-label="Retour \u00e0 l'accueil">
-          <span class="brand__mark">QN</span>
-          <span class="brand__text">
-            <strong>Nicol Quentin</strong>
-            <span>Portfolio num\u00e9rique</span>
-          </span>
-        </a>
-
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-          aria-label="Ouvrir le menu"
-          data-menu-toggle
-        >
-          <span class="menu-toggle__line"></span>
-          <span class="menu-toggle__line"></span>
-          <span class="menu-toggle__line"></span>
-        </button>
-      </div>
-
-      <nav class="topnav" id="site-nav" aria-label="Navigation principale">
-        ${linksMarkup}
-      </nav>
-    </header>
-  `;
-};
-
-buildSharedNavigation();
 
 const revealElements = document.querySelectorAll(".reveal");
 const topbar = document.querySelector(".topbar");
@@ -197,10 +101,6 @@ document.querySelectorAll("[data-panel]").forEach((panel) => {
   });
 });
 
-const servicesToggle = document.querySelector("[data-services-toggle]");
-const servicesPanel = document.querySelector("[data-services-panel]");
-const servicesLinks = document.querySelectorAll("[data-open-services]");
-
 const getScrollOffset = () => {
   if (!topbar) {
     return 24;
@@ -233,55 +133,6 @@ const setMenuOpen = (isOpen) => {
   menuToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
 };
 
-const setServicesOpen = (isOpen, options = {}) => {
-  if (!servicesToggle || !servicesPanel) {
-    return;
-  }
-
-  const { scrollIntoView = false } = options;
-
-  servicesToggle.setAttribute("aria-expanded", String(isOpen));
-  servicesPanel.classList.toggle("is-open", isOpen);
-  servicesPanel.setAttribute("aria-hidden", String(!isOpen));
-
-  if (window.history?.replaceState) {
-    const nextHash = isOpen ? "#competences-panel" : "#services";
-    window.history.replaceState(null, "", nextHash);
-  }
-
-  if (isHomePage) {
-    setActiveNavLink(isOpen ? "expertises" : getInitialActiveNavKey());
-  }
-
-  if (isOpen && scrollIntoView) {
-    window.setTimeout(() => {
-      smoothScrollToElement(servicesPanel);
-    }, 120);
-  }
-};
-
-if (servicesToggle && servicesPanel) {
-  servicesToggle.addEventListener("click", () => {
-    const isOpen = servicesToggle.getAttribute("aria-expanded") === "true";
-    setServicesOpen(!isOpen, { scrollIntoView: !isOpen });
-  });
-
-  servicesLinks.forEach((link) => {
-    if (link.dataset.navKey) {
-      return;
-    }
-
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      setServicesOpen(true, { scrollIntoView: true });
-    });
-  });
-
-  if (window.location.hash === "#competences-panel") {
-    setServicesOpen(true);
-  }
-}
-
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
     const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
@@ -296,14 +147,6 @@ navLinks.forEach((link) => {
 
     if (!href) {
       setMenuOpen(false);
-      return;
-    }
-
-    if (link.hasAttribute("data-open-services")) {
-      event.preventDefault();
-      setMenuOpen(false);
-      setActiveNavLink("expertises");
-      setServicesOpen(true, { scrollIntoView: true });
       return;
     }
 

@@ -45,14 +45,7 @@
 
         <nav class="topnav" id="site-nav" aria-label="Navigation principale">
           <a href="#projets" data-nav-link data-nav-key="portfolio">Portfolio</a>
-          <a
-            href="#competences-panel"
-            data-nav-link
-            data-nav-key="expertises"
-            data-open-services
-          >
-            Expertises
-          </a>
+          <a href="expertises.html" data-nav-link data-nav-key="expertises">Expertises</a>
           <a href="#apropos" data-nav-link data-nav-key="about">À propos</a>
           <a href="#contact-section" data-nav-link data-nav-key="contact">Contact</a>
           <a
@@ -267,7 +260,7 @@
 
         <section class="section-head reveal" id="services">
           <div>
-            <p class="section-kicker">Compétences</p>
+            <p class="section-kicker">Expertises</p>
             <h2>Savoir-faire</h2>
           </div>
           <p>
@@ -277,28 +270,24 @@
         </section>
 
         <section class="expertise-stage">
-          <button
+          <a
             class="panel expertise-lead reveal"
-            id="services-trigger"
-            type="button"
+            href="expertises.html"
             data-panel
-            data-services-toggle
-            aria-expanded="false"
-            aria-controls="competences-panel"
           >
             <div class="expertise-lead__cluster" aria-hidden="true">
               <span>DG</span>
               <span>MO</span>
               <span>3D</span>
             </div>
-            <p class="project-eyebrow">En détail</p>
-            <h3>Voir les compétences</h3>
+            <p class="project-eyebrow">Page dédiée</p>
+            <h3>Voir les expertises</h3>
             <p>
-              Outils, domaines d'intervention et types de livrables présentés
-              dans une seule section.
+              Outils, domaines d'intervention et types de livrables regroupés
+              dans une page claire et autonome.
             </p>
             <div class="card-footer">
-              <span>Afficher le détail</span>
+              <span>Ouvrir la page</span>
               <span class="arrow-chip" aria-hidden="true">
                 <svg viewBox="0 0 48 48">
                   <path d="M9 24h18m0 0-7-7m7 7-7 7" />
@@ -306,7 +295,7 @@
                 </svg>
               </span>
             </div>
-          </button>
+          </a>
 
           <article class="panel expertise-card reveal" data-panel>
             <p class="project-eyebrow">Graphisme</p>
@@ -334,80 +323,6 @@
               des présentations.
             </p>
           </article>
-        </section>
-
-        <section
-          class="panel competence-panel"
-          id="competences-panel"
-          aria-hidden="true"
-          data-services-panel
-        >
-          <div class="competence-panel__header">
-            <p class="section-kicker">Outils & pratiques</p>
-            <h2>Compétences</h2>
-            <p>
-              Les outils que j'utilise le plus souvent et les types de missions
-              sur lesquels j'interviens.
-            </p>
-          </div>
-
-          <div class="competence-grid">
-            <article class="competence-card">
-              <span class="competence-card__icon">Adobe</span>
-              <h3>Design graphique</h3>
-              <p>
-                Affiches, présentations, supports pour les réseaux sociaux et
-                éléments de communication.
-              </p>
-              <div class="skill-tags">
-                <span>Photoshop</span>
-                <span>Illustrator</span>
-                <span>InDesign</span>
-              </div>
-            </article>
-
-            <article class="competence-card competence-card--accent">
-              <span class="competence-card__icon">Animation</span>
-              <h3>Montage & animation</h3>
-              <p>
-                Vidéos, teasers, habillages et contenus animés pour informer,
-                expliquer ou valoriser un message.
-              </p>
-              <div class="skill-tags">
-                <span>Premiere Pro</span>
-                <span>After Effects</span>
-                <span>Narration</span>
-              </div>
-            </article>
-
-            <article class="competence-card">
-              <span class="competence-card__icon">3D</span>
-              <h3>Modélisation 3D</h3>
-              <p>
-                Conception d'objets, de scènes et de rendus 3D pour enrichir
-                des supports multimédia.
-              </p>
-              <div class="skill-tags">
-                <span>Blender</span>
-                <span>Cinema 4D</span>
-                <span>Rendu</span>
-              </div>
-            </article>
-
-            <article class="competence-card">
-              <span class="competence-card__icon">Prod</span>
-              <h3>Médiation digitale</h3>
-              <p>
-                Organisation, suivi et production de contenus avec une méthode
-                claire et collaborative.
-              </p>
-              <div class="skill-tags">
-                <span>Notion</span>
-                <span>Trello</span>
-                <span>Google Suite</span>
-              </div>
-            </article>
-          </div>
         </section>
 
         <section class="section-head reveal" id="contact-section">
@@ -496,6 +411,7 @@
 
         <nav class="footer__links" aria-label="Navigation footer">
           <a href="experience-professionnelle.html">Portfolio</a>
+          <a href="expertises.html">Expertises</a>
           <a href="certification.html">À propos</a>
           <a href="contact.html">Contact</a>
           <a href="docs/quentin-nicol-cv.pdf" target="_blank" rel="noreferrer">CV</a>
