@@ -181,7 +181,7 @@ const videoCollections = {
   reportages: [
     {
       src: "assets/armee/AMM-VF-HD.mp4",
-      poster: "assets/experience/video-premiere.webp",
+      poster: "assets/video-previews/amm-vf-hd.jpg",
       title: "AMM VF HD",
       type: "Reportage",
       size: "382.8 Mo",
@@ -189,7 +189,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/BAB_Canadair_Corse-Securite-civile.mp4",
-      poster: "assets/armee/OpsMediterranee-8-1-scaled.webp",
+      poster: "assets/video-previews/canadair-corse.jpg",
       title: "Canadair Corse - sécurité civile",
       type: "Reportage",
       size: "120.7 Mo",
@@ -197,7 +197,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/Episode_01_graindesel_LQ.mp4",
-      poster: "assets/armee/f5c57bfb-8886-4093-a462-a86238e83ab0_rw_1920.webp",
+      poster: "assets/video-previews/episode-grain-de-sel.jpg",
       title: "Épisode 01 Grain de sel",
       type: "Reportage",
       size: "208.5 Mo",
@@ -205,7 +205,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/Reel_Retrospective-VAE-Boidevezi-V3.mp4",
-      poster: "assets/armee/06dfa4a4-46e9-4b25-bc2d-59625dceeec2_rw_1920.webp",
+      poster: "assets/video-previews/retrospective-vae-boidevezi.jpg",
       title: "Rétrospective VAE Boidevezi",
       type: "Rétrospective",
       size: "180.4 Mo",
@@ -213,7 +213,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/Video_rade_Toulon_vs_rade_Brest-V2.mp4",
-      poster: "assets/armee/75968cb7-e355-4c7e-a67b-d156b357cd19_rw_1920.webp",
+      poster: "assets/video-previews/rade-toulon-brest.jpg",
       title: "Rade Toulon / rade Brest",
       type: "Comparatif vidéo",
       size: "28.3 Mo",
@@ -223,7 +223,7 @@ const videoCollections = {
   "formats-courts": [
     {
       src: "assets/armee/196_audio_V3.mp4",
-      poster: "assets/armee/f4c8ec6d-759b-49e7-bce5-364736041c47_rw_1920.webp",
+      poster: "assets/video-previews/196-audio-v3.jpg",
       title: "196 audio V3",
       type: "Capsule courte",
       size: "21.6 Mo",
@@ -231,7 +231,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/Intro-le-saviez-vous-V1.mp4",
-      poster: "assets/armee/f2566523-7bc0-47b6-b74c-4796c88853e2_rw_1200.webp",
+      poster: "assets/video-previews/intro-le-saviez-vous-v1.jpg",
       title: "Intro le saviez-vous",
       type: "Intro",
       size: "6.6 Mo",
@@ -239,7 +239,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/Reel-V2.2.mp4",
-      poster: "assets/armee/06dfa4a4-46e9-4b25-bc2d-59625dceeec2_rw_1920.webp",
+      poster: "assets/video-previews/reel-v22.jpg",
       title: "Reel V2.2",
       type: "Reel",
       size: "43.1 Mo",
@@ -247,7 +247,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/Sequence-01-9x16_11.mp4",
-      poster: "assets/armee/f5c57bfb-8886-4093-a462-a86238e83ab0_rw_1920.webp",
+      poster: "assets/video-previews/sequence-01-9x16-11.jpg",
       title: "Séquence 01 - 9x16",
       type: "Vertical",
       size: "81.7 Mo",
@@ -255,7 +255,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/TEASER_LANCEMENT_V5_AFFICHE.mp4",
-      poster: "assets/experience/support-communication-02.webp",
+      poster: "assets/video-previews/teaser-lancement-v5-affiche.jpg",
       title: "Teaser lancement V5",
       type: "Teaser court",
       size: "17 Mo",
@@ -265,7 +265,7 @@ const videoCollections = {
   "campagnes-video": [
     {
       src: "assets/armee/bleuet_vers_carre.mp4",
-      poster: "assets/experience/support-communication-01.webp",
+      poster: "assets/video-previews/bleuet-vers-carre.jpg",
       title: "Bleuet vers carré",
       type: "Campagne",
       size: "73.1 Mo",
@@ -273,7 +273,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/Lancement-CSLN-2024.mp4",
-      poster: "assets/armee/La-prime-dactivite.webp",
+      poster: "assets/video-previews/lancement-csln-2024.jpg",
       title: "Lancement CSLN 2024",
       type: "Lancement",
       size: "101.4 Mo",
@@ -281,7 +281,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/RECAP_EXERCICE_STEADFAST_V1.mp4",
-      poster: "assets/armee/OpsMediterranee-8-1-scaled.webp",
+      poster: "assets/video-previews/recap-exercice-steadfast-v1.jpg",
       title: "Récap exercice Steadfast",
       type: "Récap",
       size: "47.7 Mo",
@@ -289,7 +289,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/TEASER_HISTOIRE_BAN_V9_final_titre-1.mp4",
-      poster: "assets/armee/Relai-petite-enfance-1-724x1024.webp",
+      poster: "assets/video-previews/teaser-histoire-ban-v9.jpg",
       title: "Teaser histoire BAN",
       type: "Teaser",
       size: "142.2 Mo",
@@ -299,7 +299,7 @@ const videoCollections = {
   "exports-video": [
     {
       src: "assets/armee/Intro-le-saviez-vous-V1 (1).mp4",
-      poster: "assets/armee/f2566523-7bc0-47b6-b74c-4796c88853e2_rw_1200.webp",
+      poster: "assets/video-previews/intro-le-saviez-vous-v1-export-2.jpg",
       title: "Intro le saviez-vous - export 2",
       type: "Doublon",
       size: "6.6 Mo",
@@ -307,7 +307,7 @@ const videoCollections = {
     },
     {
       src: "assets/armee/Reel-V2.2-1.mp4",
-      poster: "assets/armee/06dfa4a4-46e9-4b25-bc2d-59625dceeec2_rw_1920.webp",
+      poster: "assets/video-previews/reel-v22-export-2.jpg",
       title: "Reel V2.2 - export 2",
       type: "Doublon",
       size: "43.1 Mo",
