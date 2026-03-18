@@ -1347,6 +1347,46 @@ img {
     grid-column: auto;
   }
 
+  .support-layout .media-gallery--portrait {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .support-layout .media-gallery--portrait .media-card {
+    flex: 0 0 min(76vw, 280px);
+    min-width: min(76vw, 280px);
+    gap: 12px;
+    padding: 12px;
+    scroll-snap-align: start;
+  }
+
+  .support-layout .media-gallery--portrait .media-card__media {
+    aspect-ratio: 0.78;
+  }
+
+  .support-layout .media-gallery--portrait .media-card__body h3 {
+    font-size: 1.08rem;
+    line-height: 1.08;
+  }
+
+  .support-layout .media-gallery--portrait .media-card__body p:last-child {
+    display: none;
+  }
+
+  .support-layout .media-gallery--portrait::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .support-layout .media-gallery--portrait::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(103, 215, 255, 0.22);
+  }
+
   .skills-grid-compact {
     grid-template-columns: 1fr;
   }
