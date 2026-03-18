@@ -163,12 +163,23 @@ const revealObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.16,
-    rootMargin: "0px 0px -10% 0px",
+    threshold: 0.1,
+    rootMargin: "200px 0px",
   }
 );
 
-revealElements.forEach((element) => revealObserver.observe(element));
+revealElements.forEach((element) => {
+  const containsMediaGallery = element.querySelector?.(
+    "[data-image-collection], [data-video-collection]"
+  );
+
+  if (window.innerWidth < 768 && containsMediaGallery) {
+    element.classList.add("is-visible");
+    return;
+  }
+
+  revealObserver.observe(element);
+});
 
 document.querySelectorAll("[data-panel]").forEach((panel) => {
   panel.addEventListener("pointermove", (event) => {
