@@ -4,25 +4,25 @@ const imageCollections = {
       src: "assets/armee/Soutien-psychologique-pour-les-familles-1-724x1024.png",
       title: "Soutien psychologique pour les familles",
       type: "Affiche",
-      description: "Visuel d'information a destination des familles."
+      description: "Visuel d'information à destination des familles."
     },
     {
       src: "assets/armee/Soutien-psychologique-pour-les-familles-2-724x1024.png",
       title: "Soutien psychologique - variante 2",
       type: "Affiche",
-      description: "Deuxieme variation de la campagne familles."
+      description: "Deuxième variation de la campagne familles."
     },
     {
       src: "assets/armee/Soutien-psychologique-pour-les-familles-3-724x1024.png",
       title: "Soutien psychologique - variante 3",
       type: "Affiche",
-      description: "Troisieme variation du meme sujet en format vertical."
+      description: "Troisième variation du même sujet en format vertical."
     },
     {
       src: "assets/armee/La-prime-dactivite.png",
-      title: "La prime d'activite",
+      title: "La prime d'activité",
       type: "Visuel d'information",
-      description: "Support pour expliquer un droit et pousser a la simulation."
+      description: "Support pour expliquer un droit et pousser à la simulation."
     },
     {
       src: "assets/armee/Lemploi-des-conjoints-par-DEFMOB.png",
@@ -34,13 +34,13 @@ const imageCollections = {
       src: "assets/armee/Relai-petite-enfance-1-724x1024.png",
       title: "Relai petite enfance",
       type: "Affiche",
-      description: "Support d'orientation autour de l'entraide et de l'ecoute."
+      description: "Support d'orientation autour de l'entraide et de l'écoute."
     },
     {
       src: "assets/armee/Pret-daccession-a-la-propriete_travaux-1-724x1024.png",
-      title: "Pret d'accession a la propriete / travaux",
+      title: "Prêt d'accession à la propriété / travaux",
       type: "Affiche",
-      description: "Campagne sur l'acces a un financement immobilier."
+      description: "Campagne sur l'accès à un financement immobilier."
     },
     {
       src: "assets/armee/Prestation-de-soutien-en-cas-dabsence-prolongee-du-domicile-_psad-1-724x1024.png",
@@ -58,77 +58,77 @@ const imageCollections = {
       src: "assets/armee/Aides-au-logement-parc-sni-et-indemnite-de-garnison-1.png",
       title: "Aides au logement",
       type: "Affiche",
-      description: "Visuel d'information sur le logement et l'indemnite."
+      description: "Visuel d'information sur le logement et l'indemnité."
     }
   ],
   press: [
     {
       src: "assets/armee/0f9fcf0b-ad99-42cc-853f-467d7204ae5f_rw_1200.jpg",
       title: "Revue de presse - page 1",
-      type: "Capture editoriale",
-      description: "Page de veille avec liens et hierarchisation de l'information."
+      type: "Capture éditoriale",
+      description: "Page de veille avec liens et hiérarchisation de l'information."
     },
     {
       src: "assets/armee/1881ebf5-43a6-461f-80da-d38d3f7e6959_rw_1200.jpg",
       title: "Revue de presse - page 2",
-      type: "Capture editoriale",
-      description: "Suite de la revue avec organisation des actualites."
+      type: "Capture éditoriale",
+      description: "Suite de la revue avec organisation des actualités."
     },
     {
       src: "assets/armee/2baee71a-e55f-4025-97a6-2a76d6c01911_rw_600.jpg",
-      title: "Actualites action de l'Etat en mer",
-      type: "Capture editoriale",
-      description: "Page de synthese avec couverture thematique."
+      title: "Actualités action de l'État en mer",
+      type: "Capture éditoriale",
+      description: "Page de synthèse avec couverture thématique."
     },
     {
       src: "assets/armee/2d92b052-e78c-4cbc-af0d-22467642a739_rw_1200.jpg",
       title: "Revue de presse - page 3",
-      type: "Capture editoriale",
+      type: "Capture éditoriale",
       description: "Format de lecture long avec sommaire et liens."
     },
     {
       src: "assets/armee/765d8793-1968-40bb-b833-44201830b985_rw_600.jpg",
       title: "Revue de presse - page 4",
-      type: "Capture editoriale",
+      type: "Capture éditoriale",
       description: "Mise en page de suivi des sujets institutionnels."
     },
     {
       src: "assets/armee/f2566523-7bc0-47b6-b74c-4796c88853e2_rw_1200.jpg",
-      title: "Actualites action de l'Etat en mer",
-      type: "Page de synthese",
-      description: "Couverture editoriale avec visuel et navigation sommaire."
+      title: "Actualités action de l'État en mer",
+      type: "Page de synthèse",
+      description: "Couverture éditoriale avec visuel et navigation sommaire."
     }
   ],
   social: [
     {
       src: "assets/armee/06dfa4a4-46e9-4b25-bc2d-59625dceeec2_rw_1920.png",
-      title: "Temps forts de l'annee",
-      type: "Publication reseaux",
+      title: "Temps forts de l'année",
+      type: "Publication réseaux",
       description: "Planche de publications et bilan d'audience."
     },
     {
       src: "assets/armee/75968cb7-e355-4c7e-a67b-d156b357cd19_rw_1920.png",
       title: "Temps forts",
-      type: "Publication reseaux",
-      description: "Selection de posts multi-formats pour Instagram, Facebook et X."
+      type: "Publication réseaux",
+      description: "Sélection de posts multi-formats pour Instagram, Facebook et X."
     },
     {
       src: "assets/armee/f4c8ec6d-759b-49e7-bce5-364736041c47_rw_1920.png",
       title: "Stories",
       type: "Story / format vertical",
-      description: "Assemblage de stories et de publications en format reseaux."
+      description: "Assemblage de stories et de publications en format réseaux."
     },
     {
       src: "assets/armee/f5c57bfb-8886-4093-a462-a86238e83ab0_rw_1920.jpg",
       title: "Le saviez-vous ?",
-      type: "Publication reseaux",
-      description: "Visuel poste sur un compte institutionnel avec carrousel."
+      type: "Publication réseaux",
+      description: "Visuel posté sur un compte institutionnel avec carrousel."
     },
     {
       src: "assets/armee/OpsMediterranee-8-1-scaled.png",
-      title: "Ops Mediterranee",
+      title: "Ops Méditerranée",
       type: "Visuel social",
-      description: "Creation carrousel / campagne autour des operations en Mediterranee."
+      description: "Création carrousel / campagne autour des opérations en Méditerranée."
     }
   ],
   exports: [
@@ -152,15 +152,15 @@ const imageCollections = {
     },
     {
       src: "assets/armee/Pret-daccession-a-la-propriete_travaux.png",
-      title: "Pret accession / travaux - export",
+      title: "Prêt accession / travaux - export",
       type: "Export",
-      description: "Version complementaire du support immobilier."
+      description: "Version complémentaire du support immobilier."
     },
     {
       src: "assets/armee/Relai-petite-enfance.png",
       title: "Relai petite enfance - export",
       type: "Export",
-      description: "Variation du visuel pour diffusion complementaire."
+      description: "Variation du visuel pour diffusion complémentaire."
     },
     {
       src: "assets/armee/Soutien-psychologique-pour-les-familles.png",
@@ -172,7 +172,7 @@ const imageCollections = {
       src: "assets/armee/75968cb7-e355-4c7e-a67b-d156b357cd19_rw_1920 (1).png",
       title: "Temps forts - doublon d'export",
       type: "Doublon",
-      description: "Fichier conserve tel quel dans le dossier d'origine."
+      description: "Fichier conservé tel quel dans le dossier d'origine."
     }
   ]
 };
@@ -188,29 +188,29 @@ const videoCollections = {
     },
     {
       src: "assets/armee/BAB_Canadair_Corse-Securite-civile.mp4",
-      title: "Canadair Corse - securite civile",
+      title: "Canadair Corse - sécurité civile",
       type: "Reportage",
       size: "120.7 Mo",
-      description: "Video de valorisation autour d'une intervention et de son contexte."
+      description: "Vidéo de valorisation autour d'une intervention et de son contexte."
     },
     {
       src: "assets/armee/Episode_01_graindesel_LQ.mp4",
-      title: "Episode 01 Grain de sel",
+      title: "Épisode 01 Grain de sel",
       type: "Reportage",
       size: "208.5 Mo",
-      description: "Format developpe avec montage plus narratif."
+      description: "Format développé avec montage plus narratif."
     },
     {
       src: "assets/armee/Reel_Retrospective-VAE-Boidevezi-V3.mp4",
-      title: "Retrospective VAE Boidevezi",
-      type: "Retrospective",
+      title: "Rétrospective VAE Boidevezi",
+      type: "Rétrospective",
       size: "180.4 Mo",
-      description: "Montage retrospective avec rythme plus soutenu."
+      description: "Montage rétrospectif avec rythme plus soutenu."
     },
     {
       src: "assets/armee/Video_rade_Toulon_vs_rade_Brest-V2.mp4",
       title: "Rade Toulon / rade Brest",
-      type: "Comparatif video",
+      type: "Comparatif vidéo",
       size: "28.3 Mo",
       description: "Format comparatif et de valorisation."
     }
@@ -228,21 +228,21 @@ const videoCollections = {
       title: "Intro le saviez-vous",
       type: "Intro",
       size: "6.6 Mo",
-      description: "Sequence d'introduction pour un format social ou editorial."
+      description: "Séquence d'introduction pour un format social ou éditorial."
     },
     {
       src: "assets/armee/Reel-V2.2.mp4",
       title: "Reel V2.2",
       type: "Reel",
       size: "43.1 Mo",
-      description: "Version reel pour diffusion rapide sur reseaux."
+      description: "Version reel pour diffusion rapide sur réseaux."
     },
     {
       src: "assets/armee/Sequence-01-9x16_11.mp4",
-      title: "Sequence 01 - 9x16",
+      title: "Séquence 01 - 9x16",
       type: "Vertical",
       size: "81.7 Mo",
-      description: "Format vertical pense pour story ou reel."
+      description: "Format vertical pensé pour story ou reel."
     },
     {
       src: "assets/armee/TEASER_LANCEMENT_V5_AFFICHE.mp4",
@@ -255,24 +255,24 @@ const videoCollections = {
   "campagnes-video": [
     {
       src: "assets/armee/bleuet_vers_carre.mp4",
-      title: "Bleuet vers carre",
+      title: "Bleuet vers carré",
       type: "Campagne",
       size: "73.1 Mo",
-      description: "Adaptation video d'une campagne de sensibilisation."
+      description: "Adaptation vidéo d'une campagne de sensibilisation."
     },
     {
       src: "assets/armee/Lancement-CSLN-2024.mp4",
       title: "Lancement CSLN 2024",
       type: "Lancement",
       size: "101.4 Mo",
-      description: "Video de lancement et de communication evenementielle."
+      description: "Vidéo de lancement et de communication événementielle."
     },
     {
       src: "assets/armee/RECAP_EXERCICE_STEADFAST_V1.mp4",
-      title: "Recap exercice Steadfast",
-      type: "Recap",
+      title: "Récap exercice Steadfast",
+      type: "Récap",
       size: "47.7 Mo",
-      description: "Recap video d'un exercice et de ses temps forts."
+      description: "Récap vidéo d'un exercice et de ses temps forts."
     },
     {
       src: "assets/armee/TEASER_HISTOIRE_BAN_V9_final_titre-1.mp4",
@@ -288,14 +288,14 @@ const videoCollections = {
       title: "Intro le saviez-vous - export 2",
       type: "Doublon",
       size: "6.6 Mo",
-      description: "Deuxieme export conserve dans le dossier d'origine."
+      description: "Deuxième export conservé dans le dossier d'origine."
     },
     {
       src: "assets/armee/Reel-V2.2-1.mp4",
       title: "Reel V2.2 - export 2",
       type: "Doublon",
       size: "43.1 Mo",
-      description: "Export supplementaire du reel V2.2."
+      description: "Export supplémentaire du reel V2.2."
     }
   ]
 };
