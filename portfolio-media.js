@@ -303,12 +303,19 @@ const videoCollections = {
 const renderImageCollections = () => {
   document.querySelectorAll("[data-image-collection]").forEach((container) => {
     const items = imageCollections[container.dataset.imageCollection] || [];
+    const imageLoading = container.dataset.imageLoading || "lazy";
     container.innerHTML = items
       .map(
-        (item) => `
+        (item, index) => `
           <a class="media-card" href="${item.src}" target="_blank" rel="noreferrer">
             <div class="media-card__media">
-              <img src="${item.src}" alt="${item.title}" loading="lazy" />
+              <img
+                src="${item.src}"
+                alt="${item.title}"
+                loading="${imageLoading}"
+                decoding="async"
+                fetchpriority="${imageLoading === "eager" && index < 4 ? "high" : "auto"}"
+              />
             </div>
             <div class="media-card__body">
               <p class="media-card__type">${item.type}</p>
