@@ -578,14 +578,14 @@ img {
 
 .project-spotlight {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(300px, 388px);
+  grid-template-columns: minmax(0, 1fr) minmax(286px, 356px);
   grid-template-areas:
     "copy media"
     "related related";
-  column-gap: 52px;
-  row-gap: 28px;
-  padding: 24px 24px 26px;
-  align-items: start;
+  column-gap: 30px;
+  row-gap: 24px;
+  padding: 22px 22px 24px;
+  align-items: center;
 }
 
 .project-spotlight__copy,
@@ -601,9 +601,10 @@ img {
   grid-area: copy;
   min-width: 0;
   z-index: 3;
-  gap: 1rem;
-  max-width: 540px;
-  padding-right: 6px;
+  align-self: center;
+  gap: 0.9rem;
+  max-width: 510px;
+  padding-right: 0;
 }
 
 .project-spotlight__media {
@@ -612,13 +613,13 @@ img {
   align-self: start;
   z-index: 1;
   width: 100%;
-  max-width: 388px;
+  max-width: 356px;
   justify-self: end;
 }
 
 .project-spotlight__header {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .project-spotlight__meta-row {
@@ -658,8 +659,8 @@ img {
 }
 
 .project-spotlight__copy h3 {
-  font-size: clamp(1.9rem, 2.45vw, 3rem);
-  max-width: 10.8ch;
+  font-size: clamp(1.85rem, 2.3vw, 2.82rem);
+  max-width: 11.2ch;
 }
 
 .project-spotlight__copy > p:last-of-type,
@@ -674,38 +675,44 @@ img {
 
 .project-spotlight__lead {
   margin: 0;
-  max-width: 33ch;
+  max-width: 31ch;
   color: #edf4ff;
-  font-size: 0.98rem;
-  line-height: 1.68;
+  font-size: 0.96rem;
+  line-height: 1.64;
 }
 
 .project-pill-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, max-content));
-  gap: 0.7rem 0.75rem;
-  width: min(100%, 430px);
+  gap: 0.62rem 0.65rem;
+  width: min(100%, 398px);
   max-width: 100%;
 }
 
 .project-pill-list span {
   display: inline-flex;
   align-items: center;
-  min-height: 2.25rem;
-  padding: 0.46rem 0.82rem;
+  min-height: 2.15rem;
+  padding: 0.42rem 0.76rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.09);
   background: rgba(255, 255, 255, 0.035);
   color: #dce9ff;
-  font-size: 0.84rem;
+  font-size: 0.81rem;
   white-space: normal;
 }
 
 .project-spotlight__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem;
-  padding-top: 0.2rem;
+  gap: 0.75rem;
+  padding-top: 0.1rem;
+}
+
+.project-spotlight__actions .button {
+  min-height: 52px;
+  padding: 0 1.3rem;
+  font-size: 0.96rem;
 }
 
 .project-list {
@@ -731,14 +738,14 @@ img {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(218px, auto) auto;
-  gap: 12px;
+  grid-template-rows: minmax(192px, auto) auto;
+  gap: 10px;
   align-items: stretch;
   min-height: auto;
   overflow: hidden;
   isolation: isolate;
   width: 100%;
-  padding: 14px;
+  padding: 12px;
   border-radius: calc(var(--radius-lg) - 0.05rem);
   border: 1px solid rgba(255, 255, 255, 0.06);
   background:
@@ -758,8 +765,8 @@ img {
 .project-spotlight__visual-frame {
   position: relative;
   min-width: 0;
-  min-height: 214px;
-  aspect-ratio: 1.5;
+  min-height: 194px;
+  aspect-ratio: 1.72;
   overflow: hidden;
   border-radius: 1.4rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -779,7 +786,7 @@ img {
   position: relative;
   max-width: none;
   min-height: 0;
-  padding: 0.82rem 0.95rem;
+  padding: 0.72rem 0.84rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.15rem;
   background: rgba(8, 11, 19, 0.76);
@@ -791,13 +798,13 @@ img {
 
 .project-spotlight__visual-meta strong {
   display: block;
-  font-size: 0.96rem;
+  font-size: 0.92rem;
 }
 
 .project-spotlight__visual-meta span {
   color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.45;
+  font-size: 0.88rem;
+  line-height: 1.38;
 }
 
 .project-spotlight__visual-cta {
@@ -805,9 +812,9 @@ img {
   align-items: center;
   gap: 0.4rem;
   width: fit-content;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
   color: #eef7ff;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.01em;
 }
@@ -1445,6 +1452,7 @@ img {
       "media"
       "related";
     gap: 24px;
+    align-items: start;
   }
 
   .project-spotlight__copy,
