@@ -1,4 +1,8 @@
 const revealElements = document.querySelectorAll(".reveal");
+const topbar = document.querySelector(".topbar");
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const mobileNav = document.querySelector("[data-mobile-nav]");
+const navLinks = document.querySelectorAll("[data-nav-link]");
 
 revealElements.forEach((element, index) => {
   element.style.setProperty("--delay", `${index * 90}ms`);
@@ -43,6 +47,37 @@ const servicesToggle = document.querySelector("[data-services-toggle]");
 const servicesPanel = document.querySelector("[data-services-panel]");
 const servicesLinks = document.querySelectorAll("[data-open-services]");
 
+const getScrollOffset = () => {
+  if (!topbar) {
+    return 24;
+  }
+
+  return topbar.getBoundingClientRect().height + 22;
+};
+
+const smoothScrollToElement = (element) => {
+  if (!element) {
+    return;
+  }
+
+  const nextTop = window.scrollY + element.getBoundingClientRect().top - getScrollOffset();
+
+  window.scrollTo({
+    top: Math.max(nextTop, 0),
+    behavior: "smooth",
+  });
+};
+
+const setMenuOpen = (isOpen) => {
+  if (!menuToggle || !mobileNav) {
+    return;
+  }
+
+  mobileNav.classList.toggle("is-nav-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+};
+
 const setServicesOpen = (isOpen, options = {}) => {
   if (!servicesToggle || !servicesPanel) {
     return;
@@ -61,10 +96,7 @@ const setServicesOpen = (isOpen, options = {}) => {
 
   if (isOpen && scrollIntoView) {
     window.setTimeout(() => {
-      servicesPanel.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      smoothScrollToElement(servicesPanel);
     }, 120);
   }
 };
@@ -76,6 +108,10 @@ if (servicesToggle && servicesPanel) {
   });
 
   servicesLinks.forEach((link) => {
+    if (link.hasAttribute("data-nav-link")) {
+      return;
+    }
+
     link.addEventListener("click", (event) => {
       event.preventDefault();
       setServicesOpen(true, { scrollIntoView: true });
@@ -86,3 +122,69 @@ if (servicesToggle && servicesPanel) {
     setServicesOpen(true);
   }
 }
+
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    setMenuOpen(!isOpen);
+  });
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const href = link.getAttribute("href");
+
+    if (!href) {
+      setMenuOpen(false);
+      return;
+    }
+
+    if (link.hasAttribute("data-open-services")) {
+      event.preventDefault();
+      setServicesOpen(true, { scrollIntoView: true });
+      setMenuOpen(false);
+      return;
+    }
+
+    if (href.startsWith("#")) {
+      const target = document.querySelector(href);
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+      smoothScrollToElement(target);
+
+      if (window.history?.replaceState) {
+        window.history.replaceState(null, "", href);
+      }
+    }
+
+    setMenuOpen(false);
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!mobileNav || !mobileNav.classList.contains("is-nav-open")) {
+    return;
+  }
+
+  if (mobileNav.contains(event.target)) {
+    return;
+  }
+
+  setMenuOpen(false);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    setMenuOpen(false);
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 820) {
+    setMenuOpen(false);
+  }
+});

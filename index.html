@@ -18,25 +18,41 @@
   </head>
   <body>
     <div class="page-shell">
-      <header class="topbar reveal">
-        <a class="brand" href="#accueil" aria-label="Retour à l'accueil">
-          <span class="brand__mark">QN</span>
-          <span class="brand__text">
-            <strong>Nicol Quentin</strong>
-            <span>Portfolio numérique</span>
-          </span>
-        </a>
+      <header class="topbar reveal" data-mobile-nav>
+        <div class="topbar__primary">
+          <a class="brand" href="#accueil" aria-label="Retour à l'accueil">
+            <span class="brand__mark">QN</span>
+            <span class="brand__text">
+              <strong>Nicol Quentin</strong>
+              <span>Portfolio numérique</span>
+            </span>
+          </a>
 
-        <nav class="topnav" aria-label="Navigation principale">
-          <a href="experience-professionnelle.html">Portfolio</a>
-          <a href="#competences-panel" data-open-services>Expertises</a>
-          <a href="certification.html">À propos</a>
-          <a href="contact.html">Contact</a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Ouvrir le menu"
+            data-menu-toggle
+          >
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+          </button>
+        </div>
+
+        <nav class="topnav" id="site-nav" aria-label="Navigation principale">
+          <a href="#projets" data-nav-link>Portfolio</a>
+          <a href="#competences-panel" data-open-services data-nav-link>Expertises</a>
+          <a href="#apropos" data-nav-link>À propos</a>
+          <a href="#contact-section" data-nav-link>Contact</a>
           <a
             class="topnav__cta"
             href="docs/quentin-nicol-cv.pdf"
             target="_blank"
             rel="noreferrer"
+            data-nav-link
           >
             CV
           </a>
@@ -214,6 +230,7 @@
 
             <a
               class="panel project-card project-card--text reveal"
+              id="apropos"
               href="certification.html"
               data-panel
             >
@@ -384,7 +401,7 @@
           </div>
         </section>
 
-        <section class="section-head reveal">
+        <section class="section-head reveal" id="contact-section">
           <div>
             <p class="section-kicker">Infos utiles</p>
             <h2>CV & contact</h2>
