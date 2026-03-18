@@ -26,10 +26,7 @@ html {
 
 #accueil,
 #projets,
-#services,
-#competences-panel,
-#apropos,
-#contact-section {
+#services {
   scroll-margin-top: 132px;
 }
 

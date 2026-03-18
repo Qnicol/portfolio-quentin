@@ -21,14 +21,6 @@ const getInitialActiveNavKey = () => {
     return "portfolio";
   }
 
-  if (window.location.hash === "#apropos") {
-    return "about";
-  }
-
-  if (window.location.hash === "#contact-section") {
-    return "contact";
-  }
-
   return null;
 };
 
