@@ -921,80 +921,91 @@ img {
 
 .project-spotlight__device--sheet {
   position: absolute;
-  right: 24px;
-  top: 114px;
-  width: 27%;
-  min-width: 136px;
-  height: 188px;
-  padding: 16px 14px;
-  border-radius: 1.2rem;
-  background: linear-gradient(180deg, rgba(250, 252, 255, 0.98), rgba(206, 219, 255, 0.96));
-  color: #10233f;
-  transform: rotate(4deg);
-  box-shadow: 0 16px 32px rgba(7, 13, 28, 0.28);
+  right: 26px;
+  top: 124px;
+  width: 24%;
+  min-width: 138px;
+  height: 196px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.42rem;
+  overflow: hidden;
+  padding: 15px 14px;
+  border-radius: 1.3rem;
+  border: 1px solid rgba(126, 192, 255, 0.22);
+  background:
+    radial-gradient(circle at 84% 14%, rgba(111, 207, 255, 0.16), transparent 34%),
+    linear-gradient(180deg, rgba(24, 37, 67, 0.9), rgba(16, 24, 46, 0.94));
+  color: #eaf3ff;
+  backdrop-filter: blur(14px);
+  transform: rotate(2.5deg);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 34px rgba(7, 13, 28, 0.3);
+  isolation: isolate;
+}
+
+.project-spotlight__device--sheet::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 11, 24, 0.12) 0%, rgba(8, 11, 24, 0.36) 42%, rgba(7, 10, 20, 0.9) 100%),
+    linear-gradient(135deg, rgba(60, 153, 255, 0.08), transparent 58%);
+}
+
+.project-spotlight__device--sheet img {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.08) brightness(0.82);
 }
 
 .project-spotlight__sheet-head {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  padding: 0.25rem 0.55rem;
+  position: relative;
+  z-index: 1;
+  padding: 0.32rem 0.68rem;
   border-radius: 999px;
-  background: rgba(27, 57, 103, 0.12);
-  font-size: 0.62rem;
+  border: 1px solid rgba(147, 205, 255, 0.18);
+  background: rgba(12, 21, 44, 0.6);
+  color: #d9ebff;
+  font-size: 0.56rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .project-spotlight__sheet-title {
   display: block;
-  margin-top: 0.75rem;
+  position: relative;
+  z-index: 1;
   font-family: "Space Grotesk", sans-serif;
   font-size: 0.92rem;
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  text-shadow: 0 8px 22px rgba(5, 10, 24, 0.45);
 }
 
-.project-spotlight__sheet-line {
+.project-spotlight__sheet-note {
   display: block;
-  height: 8px;
-  margin-top: 0.7rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(47, 111, 207, 0.88), rgba(91, 211, 255, 0.68));
-}
-
-.project-spotlight__sheet-line--wide {
-  width: 70%;
-  margin-top: 0.45rem;
-  opacity: 0.7;
-}
-
-.project-spotlight__sheet-bars {
-  display: flex;
-  align-items: end;
-  gap: 0.35rem;
-  margin-top: 0.95rem;
-  min-height: 62px;
-}
-
-.project-spotlight__sheet-bars i {
-  display: block;
-  flex: 1 1 0;
-  border-radius: 0.7rem 0.7rem 0.2rem 0.2rem;
-  background: linear-gradient(180deg, rgba(39, 105, 205, 0.84), rgba(83, 203, 255, 0.7));
-}
-
-.project-spotlight__sheet-bars i:nth-child(1) {
-  height: 42px;
-}
-
-.project-spotlight__sheet-bars i:nth-child(2) {
-  height: 56px;
-}
-
-.project-spotlight__sheet-bars i:nth-child(3) {
-  height: 32px;
+  position: relative;
+  z-index: 1;
+  font-size: 0.71rem;
+  line-height: 1.38;
+  color: rgba(226, 238, 255, 0.82);
+  max-width: 11ch;
 }
 
 .project-spotlight__visual-frame {
@@ -1716,10 +1727,10 @@ img {
 
   .project-spotlight__device--sheet {
     right: 18px;
-    top: 100px;
+    top: 108px;
     width: 25%;
     min-width: 124px;
-    height: 172px;
+    height: 178px;
   }
 
   .project-spotlight__device--poster {
@@ -1938,11 +1949,19 @@ img {
 
   .project-spotlight__device--sheet {
     right: 14px;
-    top: 88px;
+    top: 84px;
     width: 30%;
     min-width: 102px;
-    height: 148px;
-    padding: 12px 10px;
+    height: 152px;
+    padding: 12px 11px;
+  }
+
+  .project-spotlight__sheet-title {
+    font-size: 0.82rem;
+  }
+
+  .project-spotlight__sheet-note {
+    font-size: 0.64rem;
   }
 
   .project-spotlight__device--poster {
