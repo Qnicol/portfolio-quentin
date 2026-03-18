@@ -779,6 +779,13 @@ img {
   display: grid;
   align-content: start;
   gap: 0.22rem;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+  cursor: pointer;
 }
 
 .project-spotlight__visual-meta strong {
@@ -790,6 +797,18 @@ img {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.45;
+}
+
+.project-spotlight__visual-meta:hover {
+  transform: translateY(-2px);
+  border-color: rgba(103, 215, 255, 0.34);
+  background: rgba(10, 15, 26, 0.9);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+}
+
+.project-spotlight__visual-meta:focus-visible {
+  outline: 2px solid rgba(103, 215, 255, 0.72);
+  outline-offset: 3px;
 }
 
 .project-related {
