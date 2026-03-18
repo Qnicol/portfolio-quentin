@@ -74,6 +74,7 @@ const setMenuOpen = (isOpen) => {
   }
 
   mobileNav.classList.toggle("is-nav-open", isOpen);
+  document.body.classList.toggle("menu-open", isOpen);
   menuToggle.setAttribute("aria-expanded", String(isOpen));
   menuToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
 };
@@ -141,8 +142,8 @@ navLinks.forEach((link) => {
 
     if (link.hasAttribute("data-open-services")) {
       event.preventDefault();
-      setServicesOpen(true, { scrollIntoView: true });
       setMenuOpen(false);
+      setServicesOpen(true, { scrollIntoView: true });
       return;
     }
 
@@ -154,6 +155,7 @@ navLinks.forEach((link) => {
       }
 
       event.preventDefault();
+      setMenuOpen(false);
       smoothScrollToElement(target);
 
       if (window.history?.replaceState) {
@@ -164,6 +166,18 @@ navLinks.forEach((link) => {
     setMenuOpen(false);
   });
 });
+
+if (topbar) {
+  const overlayNav = topbar.querySelector(".topnav");
+
+  if (overlayNav) {
+    overlayNav.addEventListener("click", (event) => {
+      if (event.target === overlayNav) {
+        setMenuOpen(false);
+      }
+    });
+  }
+}
 
 document.addEventListener("click", (event) => {
   if (!mobileNav || !mobileNav.classList.contains("is-nav-open")) {
