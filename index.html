@@ -138,41 +138,43 @@
 
         <section class="section-head reveal" id="projets">
           <div>
-            <p class="section-kicker">Projets</p>
-            <h2>Projets sélectionnés</h2>
+            <p class="section-kicker">Portfolio</p>
+            <h2>Expérience & réalisations</h2>
           </div>
           <p>
-            Une sélection de travaux en communication visuelle, vidéo et
-            production multimédia.
+            Une lecture structurée du parcours, avec une expérience principale
+            et une étude de cas directement rattachée.
           </p>
         </section>
 
         <section class="project-stage">
-          <a
-            class="panel project-spotlight reveal"
-            href="experience-professionnelle.html"
-            data-panel
-          >
+          <article class="panel project-spotlight reveal" data-panel>
             <div class="project-spotlight__copy">
-              <p class="project-eyebrow">Parcours</p>
-              <h3>Expérience professionnelle</h3>
-              <p>
-                Des projets réalisés autour des supports de communication, de
-                la vidéo et des travaux graphiques.
+              <div class="project-spotlight__header">
+                <div>
+                  <p class="project-eyebrow">Expérience principale</p>
+                  <h3>Expérience professionnelle</h3>
+                </div>
+                <span class="project-spotlight__badge">Cadre principal</span>
+              </div>
+
+              <p class="project-spotlight__lead">
+                Un ensemble de missions menées en communication visuelle,
+                production multimédia et création de supports à destination des
+                publics.
               </p>
-              <ul class="project-list">
-                <li>Supports de communication print et numériques</li>
-                <li>Revue de presse et contenus éditoriaux</li>
-                <li>Montage vidéo et habillage graphique</li>
-              </ul>
-              <div class="card-footer">
-                <span>Voir les projets</span>
-                <span class="arrow-chip" aria-hidden="true">
-                  <svg viewBox="0 0 48 48">
-                    <path d="M9 24h18m0 0-7-7m7 7-7 7" />
-                    <path d="M24 9a15 15 0 1 1-10.6 4.4" />
-                  </svg>
-                </span>
+
+              <div class="project-pill-list" aria-label="Travaux menés">
+                <span>Supports print et numériques</span>
+                <span>Revue de presse</span>
+                <span>Montage vidéo</span>
+                <span>Habillage graphique</span>
+              </div>
+
+              <div class="project-spotlight__actions">
+                <a class="button button--secondary" href="experience-professionnelle.html">
+                  Voir l'expérience
+                </a>
               </div>
             </div>
 
@@ -196,40 +198,44 @@
                 <span>Print, vidéo, infographie et supports numériques</span>
               </div>
             </div>
-          </a>
 
-          <div class="project-stack">
-            <a
-              class="panel project-card reveal"
-              href="support-communication.html"
-              data-panel
-            >
-              <div class="project-card__media">
-                <img
-                  src="assets/experience/support-communication-01.webp"
-                  alt="Projet de support de communication"
-                  loading="lazy"
-                />
-              </div>
-              <div class="project-card__copy">
-                <p class="project-eyebrow">Projet détaillé</p>
-                <h3>Support de communication</h3>
+            <div class="project-related">
+              <div class="project-related__intro">
+                <p class="project-eyebrow">Étude de cas liée</p>
+                <h4>Support de communication</h4>
                 <p>
-                  Une sélection d'affiches et de visuels produits pour informer
-                  et accompagner des publics.
+                  Une sélection d'affiches et de visuels conçus dans le cadre de
+                  cette expérience pour informer, orienter et accompagner les publics.
                 </p>
               </div>
-              <div class="card-footer">
-                <span>Voir le détail</span>
-                <span class="arrow-chip" aria-hidden="true">
-                  <svg viewBox="0 0 48 48">
-                    <path d="M9 24h18m0 0-7-7m7 7-7 7" />
-                    <path d="M24 9a15 15 0 1 1-10.6 4.4" />
-                  </svg>
-                </span>
-              </div>
-            </a>
 
+              <a class="project-related__card" href="support-communication.html">
+                <div class="project-related__media">
+                  <img
+                    src="assets/experience/support-communication-01.webp"
+                    alt="Étude de cas support de communication"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-related__body">
+                  <span class="project-related__tag">
+                    Affiches · information · accompagnement
+                  </span>
+                  <strong>Voir l'étude de cas</strong>
+                  <p>
+                    Retrouver les visuels, affiches et déclinaisons réalisés dans
+                    cette mission.
+                  </p>
+                  <span class="project-related__link">
+                    Ouvrir le détail
+                    <span class="project-related__link-arrow" aria-hidden="true">↗</span>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </article>
+
+          <div class="project-stack">
             <a
               class="panel project-card project-card--text reveal"
               href="certification.html"
@@ -237,11 +243,10 @@
             >
               <div class="project-card__symbol">QN</div>
               <div class="project-card__copy">
-                <p class="project-eyebrow">Parcours</p>
+                <p class="project-eyebrow">Profil</p>
                 <h3>À propos</h3>
                 <p>
-                  Formation, expérience et compétences présentées de manière
-                  simple et directe.
+                  Parcours, formation et repères clés pour situer rapidement le profil.
                 </p>
               </div>
               <div class="card-footer">
