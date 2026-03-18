@@ -578,11 +578,11 @@ img {
 
 .project-spotlight {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
   grid-template-areas:
     "copy media"
     "related related";
-  gap: 26px;
+  gap: 32px;
   padding: 30px;
   align-items: start;
 }
@@ -710,14 +710,14 @@ img {
 .project-spotlight__visual-shell {
   position: relative;
   display: grid;
-  grid-template-columns: 176px minmax(0, 1fr);
-  grid-template-rows: minmax(196px, 1fr) auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: minmax(272px, 1fr) auto;
   grid-template-areas:
-    "small large"
-    "stat large";
-  gap: 16px;
+    "large large"
+    "small stat";
+  gap: 18px;
   align-items: stretch;
-  min-height: 428px;
+  min-height: 438px;
   overflow: hidden;
   isolation: isolate;
   padding: 22px;
@@ -749,13 +749,13 @@ img {
 
 .floating-card--large {
   grid-area: large;
-  min-height: 100%;
+  min-height: 272px;
   z-index: 1;
 }
 
 .floating-card--small {
   grid-area: small;
-  min-height: 196px;
+  min-height: 164px;
   z-index: 2;
 }
 
@@ -763,13 +763,16 @@ img {
   position: relative;
   grid-area: stat;
   max-width: none;
+  min-height: 164px;
   padding: 1rem 1.1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.15rem;
   background: rgba(8, 11, 19, 0.76);
   backdrop-filter: blur(14px);
   z-index: 3;
-  align-self: end;
+  align-self: stretch;
+  display: grid;
+  align-content: start;
 }
 
 .floating-stat strong {
@@ -1389,7 +1392,6 @@ img {
 
   .project-spotlight__visual-shell {
     min-height: 400px;
-    grid-template-columns: 160px minmax(0, 1fr);
   }
 
   .project-related {
@@ -1578,11 +1580,14 @@ img {
 
   .project-spotlight__visual-shell {
     min-height: 360px;
-    grid-template-columns: 138px minmax(0, 1fr);
   }
 
   .floating-card--small {
-    min-height: 164px;
+    min-height: 148px;
+  }
+
+  .floating-stat {
+    min-height: 148px;
   }
 }
 
@@ -1622,8 +1627,13 @@ img {
   }
 
   .project-spotlight__visual-shell {
-    min-height: 320px;
-    grid-template-columns: 112px minmax(0, 1fr);
+    min-height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "large"
+      "small"
+      "stat";
     gap: 12px;
     padding: 16px;
   }
@@ -1646,11 +1656,13 @@ img {
   }
 
   .floating-card--small {
-    min-height: 136px;
+    min-height: 0;
+    aspect-ratio: 1.18;
   }
 
   .floating-stat {
     max-width: none;
+    min-height: 0;
     padding: 0.85rem 0.9rem;
   }
 
