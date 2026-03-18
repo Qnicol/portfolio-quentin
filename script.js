@@ -145,6 +145,8 @@ const setActiveNavLink = (key) => {
   });
 };
 
+setActiveNavLink(getInitialActiveNavKey());
+
 revealElements.forEach((element, index) => {
   element.style.setProperty("--delay", `${index * 90}ms`);
 });
