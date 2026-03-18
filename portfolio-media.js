@@ -1,61 +1,61 @@
 const imageCollections = {
   campaigns: [
     {
-      src: "assets/armee/Soutien-psychologique-pour-les-familles-1-724x1024.png",
+      src: "assets/armee/Soutien-psychologique-pour-les-familles-1-724x1024.webp",
       title: "Soutien psychologique pour les familles",
       type: "Affiche",
       description: "Visuel d'information à destination des familles."
     },
     {
-      src: "assets/armee/Soutien-psychologique-pour-les-familles-2-724x1024.png",
+      src: "assets/armee/Soutien-psychologique-pour-les-familles-2-724x1024.webp",
       title: "Soutien psychologique - variante 2",
       type: "Affiche",
       description: "Deuxième variation de la campagne familles."
     },
     {
-      src: "assets/armee/Soutien-psychologique-pour-les-familles-3-724x1024.png",
+      src: "assets/armee/Soutien-psychologique-pour-les-familles-3-724x1024.webp",
       title: "Soutien psychologique - variante 3",
       type: "Affiche",
       description: "Troisième variation du même sujet en format vertical."
     },
     {
-      src: "assets/armee/La-prime-dactivite.png",
+      src: "assets/armee/La-prime-dactivite.webp",
       title: "La prime d'activité",
       type: "Visuel d'information",
       description: "Support pour expliquer un droit et pousser à la simulation."
     },
     {
-      src: "assets/armee/Lemploi-des-conjoints-par-DEFMOB.png",
+      src: "assets/armee/Lemploi-des-conjoints-par-DEFMOB.webp",
       title: "L'emploi des conjoints",
       type: "Visuel d'information",
       description: "Message de communication sur l'accompagnement professionnel."
     },
     {
-      src: "assets/armee/Relai-petite-enfance-1-724x1024.png",
+      src: "assets/armee/Relai-petite-enfance-1-724x1024.webp",
       title: "Relai petite enfance",
       type: "Affiche",
       description: "Support d'orientation autour de l'entraide et de l'écoute."
     },
     {
-      src: "assets/armee/Pret-daccession-a-la-propriete_travaux-1-724x1024.png",
+      src: "assets/armee/Pret-daccession-a-la-propriete_travaux-1-724x1024.webp",
       title: "Prêt d'accession à la propriété / travaux",
       type: "Affiche",
       description: "Campagne sur l'accès à un financement immobilier."
     },
     {
-      src: "assets/armee/Prestation-de-soutien-en-cas-dabsence-prolongee-du-domicile-_psad-1-724x1024.png",
+      src: "assets/armee/Prestation-de-soutien-en-cas-dabsence-prolongee-du-domicile-_psad-1-724x1024.webp",
       title: "Prestation de soutien - PSAD",
       type: "Affiche",
       description: "Support d'information sur une aide du quotidien."
     },
     {
-      src: "assets/armee/Les-prestations-sociales-1.png",
+      src: "assets/armee/Les-prestations-sociales-1.webp",
       title: "Les prestations sociales",
       type: "Affiche",
       description: "Visuel pour identifier les aides accessibles."
     },
     {
-      src: "assets/armee/Aides-au-logement-parc-sni-et-indemnite-de-garnison-1.png",
+      src: "assets/armee/Aides-au-logement-parc-sni-et-indemnite-de-garnison-1.webp",
       title: "Aides au logement",
       type: "Affiche",
       description: "Visuel d'information sur le logement et l'indemnité."
@@ -63,37 +63,37 @@ const imageCollections = {
   ],
   press: [
     {
-      src: "assets/armee/0f9fcf0b-ad99-42cc-853f-467d7204ae5f_rw_1200.jpg",
+      src: "assets/armee/0f9fcf0b-ad99-42cc-853f-467d7204ae5f_rw_1200.webp",
       title: "Revue de presse - page 1",
       type: "Capture éditoriale",
       description: "Page de veille avec liens et hiérarchisation de l'information."
     },
     {
-      src: "assets/armee/1881ebf5-43a6-461f-80da-d38d3f7e6959_rw_1200.jpg",
+      src: "assets/armee/1881ebf5-43a6-461f-80da-d38d3f7e6959_rw_1200.webp",
       title: "Revue de presse - page 2",
       type: "Capture éditoriale",
       description: "Suite de la revue avec organisation des actualités."
     },
     {
-      src: "assets/armee/2baee71a-e55f-4025-97a6-2a76d6c01911_rw_600.jpg",
+      src: "assets/armee/2baee71a-e55f-4025-97a6-2a76d6c01911_rw_600.webp",
       title: "Actualités action de l'État en mer",
       type: "Capture éditoriale",
       description: "Page de synthèse avec couverture thématique."
     },
     {
-      src: "assets/armee/2d92b052-e78c-4cbc-af0d-22467642a739_rw_1200.jpg",
+      src: "assets/armee/2d92b052-e78c-4cbc-af0d-22467642a739_rw_1200.webp",
       title: "Revue de presse - page 3",
       type: "Capture éditoriale",
       description: "Format de lecture long avec sommaire et liens."
     },
     {
-      src: "assets/armee/765d8793-1968-40bb-b833-44201830b985_rw_600.jpg",
+      src: "assets/armee/765d8793-1968-40bb-b833-44201830b985_rw_600.webp",
       title: "Revue de presse - page 4",
       type: "Capture éditoriale",
       description: "Mise en page de suivi des sujets institutionnels."
     },
     {
-      src: "assets/armee/f2566523-7bc0-47b6-b74c-4796c88853e2_rw_1200.jpg",
+      src: "assets/armee/f2566523-7bc0-47b6-b74c-4796c88853e2_rw_1200.webp",
       title: "Actualités action de l'État en mer",
       type: "Page de synthèse",
       description: "Couverture éditoriale avec visuel et navigation sommaire."
@@ -101,31 +101,31 @@ const imageCollections = {
   ],
   social: [
     {
-      src: "assets/armee/06dfa4a4-46e9-4b25-bc2d-59625dceeec2_rw_1920.png",
+      src: "assets/armee/06dfa4a4-46e9-4b25-bc2d-59625dceeec2_rw_1920.webp",
       title: "Temps forts de l'année",
       type: "Publication réseaux",
       description: "Planche de publications et bilan d'audience."
     },
     {
-      src: "assets/armee/75968cb7-e355-4c7e-a67b-d156b357cd19_rw_1920.png",
+      src: "assets/armee/75968cb7-e355-4c7e-a67b-d156b357cd19_rw_1920.webp",
       title: "Temps forts",
       type: "Publication réseaux",
       description: "Sélection de posts multi-formats pour Instagram, Facebook et X."
     },
     {
-      src: "assets/armee/f4c8ec6d-759b-49e7-bce5-364736041c47_rw_1920.png",
+      src: "assets/armee/f4c8ec6d-759b-49e7-bce5-364736041c47_rw_1920.webp",
       title: "Stories",
       type: "Story / format vertical",
       description: "Assemblage de stories et de publications en format réseaux."
     },
     {
-      src: "assets/armee/f5c57bfb-8886-4093-a462-a86238e83ab0_rw_1920.jpg",
+      src: "assets/armee/f5c57bfb-8886-4093-a462-a86238e83ab0_rw_1920.webp",
       title: "Le saviez-vous ?",
       type: "Publication réseaux",
       description: "Visuel posté sur un compte institutionnel avec carrousel."
     },
     {
-      src: "assets/armee/OpsMediterranee-8-1-scaled.png",
+      src: "assets/armee/OpsMediterranee-8-1-scaled.webp",
       title: "Ops Méditerranée",
       type: "Visuel social",
       description: "Création carrousel / campagne autour des opérations en Méditerranée."
@@ -133,43 +133,43 @@ const imageCollections = {
   ],
   exports: [
     {
-      src: "assets/armee/Aides-au-logement-parc-sni-et-indemnite-de-garnison.png",
+      src: "assets/armee/Aides-au-logement-parc-sni-et-indemnite-de-garnison.webp",
       title: "Aides au logement - export",
       type: "Export",
       description: "Version alternative du visuel logement."
     },
     {
-      src: "assets/armee/Les-prestations-sociales.png",
+      src: "assets/armee/Les-prestations-sociales.webp",
       title: "Prestations sociales - export",
       type: "Export",
       description: "Version alternative du visuel prestations sociales."
     },
     {
-      src: "assets/armee/Prestation-de-soutien-en-cas-dabsence-prolongee-du-domicile-_psad.png",
+      src: "assets/armee/Prestation-de-soutien-en-cas-dabsence-prolongee-du-domicile-_psad.webp",
       title: "PSAD - export",
       type: "Export",
       description: "Variation de format pour la prestation de soutien."
     },
     {
-      src: "assets/armee/Pret-daccession-a-la-propriete_travaux.png",
+      src: "assets/armee/Pret-daccession-a-la-propriete_travaux.webp",
       title: "Prêt accession / travaux - export",
       type: "Export",
       description: "Version complémentaire du support immobilier."
     },
     {
-      src: "assets/armee/Relai-petite-enfance.png",
+      src: "assets/armee/Relai-petite-enfance.webp",
       title: "Relai petite enfance - export",
       type: "Export",
       description: "Variation du visuel pour diffusion complémentaire."
     },
     {
-      src: "assets/armee/Soutien-psychologique-pour-les-familles.png",
+      src: "assets/armee/Soutien-psychologique-pour-les-familles.webp",
       title: "Soutien psychologique - export",
       type: "Export",
       description: "Version additionnelle du visuel familles."
     },
     {
-      src: "assets/armee/75968cb7-e355-4c7e-a67b-d156b357cd19_rw_1920 (1).png",
+      src: "assets/armee/75968cb7-e355-4c7e-a67b-d156b357cd19_rw_1920 (1).webp",
       title: "Temps forts - doublon d'export",
       type: "Doublon",
       description: "Fichier conservé tel quel dans le dossier d'origine."
