@@ -300,22 +300,86 @@ const videoCollections = {
   ]
 };
 
+const galleryImagePlaceholder =
+  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+const galleryObserverOptions = {
+  threshold: 0.1,
+  rootMargin: "200px 0px",
+};
+
+const finalizeGalleryImage = (image) => {
+  const mediaFrame = image.closest(".media-card__media");
+  mediaFrame?.classList.add("is-loaded");
+};
+
+const loadGalleryImage = (image) => {
+  if (!image.dataset.src || image.dataset.loaded === "true") {
+    return;
+  }
+
+  image.dataset.loaded = "true";
+  image.src = image.dataset.src;
+
+  if (image.complete && image.naturalWidth > 1) {
+    finalizeGalleryImage(image);
+  }
+};
+
+const observeGalleryImages = () => {
+  const images = [...document.querySelectorAll(".media-card__image[data-src]")];
+
+  if (!images.length) {
+    return;
+  }
+
+  const shouldForceImmediateLoad = window.innerWidth < 768 || !("IntersectionObserver" in window);
+
+  images.forEach((image) => {
+    image.addEventListener("load", () => finalizeGalleryImage(image), { once: true });
+    image.addEventListener("error", () => finalizeGalleryImage(image), { once: true });
+  });
+
+  if (shouldForceImmediateLoad) {
+    images.forEach((image) => loadGalleryImage(image));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting && entry.intersectionRatio < 0.1) {
+        return;
+      }
+
+      loadGalleryImage(entry.target);
+      currentObserver.unobserve(entry.target);
+    });
+  }, galleryObserverOptions);
+
+  images.forEach((image, index) => {
+    if (index < 4) {
+      loadGalleryImage(image);
+      return;
+    }
+
+    observer.observe(image);
+  });
+};
+
 const renderImageCollections = () => {
   document.querySelectorAll("[data-image-collection]").forEach((container) => {
     const items = imageCollections[container.dataset.imageCollection] || [];
-    const imageLoading = container.dataset.imageLoading || "lazy";
-    const loadingAttribute = imageLoading === "eager" ? "" : ' loading="lazy"';
     container.innerHTML = items
       .map(
         (item, index) => `
           <a class="media-card" href="${item.src}" target="_blank" rel="noreferrer">
             <div class="media-card__media">
               <img
-                src="${item.src}"
+                class="media-card__image"
+                src="${galleryImagePlaceholder}"
+                data-src="${item.src}"
                 alt="${item.title}"
-                ${loadingAttribute}
                 decoding="async"
-                fetchpriority="${imageLoading === "eager" && index < 4 ? "high" : "auto"}"
+                fetchpriority="${index < 4 ? "high" : "auto"}"
               />
             </div>
             <div class="media-card__body">
@@ -327,22 +391,6 @@ const renderImageCollections = () => {
         `
       )
       .join("");
-  });
-};
-
-const eagerImagePreloaders = [];
-
-const preloadEagerImageCollections = () => {
-  document.querySelectorAll('[data-image-collection][data-image-loading="eager"]').forEach((container) => {
-    const items = imageCollections[container.dataset.imageCollection] || [];
-
-    items.forEach((item, index) => {
-      const preloadImage = new Image();
-      preloadImage.decoding = "async";
-      preloadImage.fetchPriority = index < 6 ? "high" : "low";
-      preloadImage.src = item.src;
-      eagerImagePreloaders.push(preloadImage);
-    });
   });
 };
 
@@ -376,4 +424,4 @@ const renderVideoCollections = () => {
 
 renderImageCollections();
 renderVideoCollections();
-preloadEagerImageCollections();
+observeGalleryImages();
