@@ -304,6 +304,7 @@ const renderImageCollections = () => {
   document.querySelectorAll("[data-image-collection]").forEach((container) => {
     const items = imageCollections[container.dataset.imageCollection] || [];
     const imageLoading = container.dataset.imageLoading || "lazy";
+    const loadingAttribute = imageLoading === "eager" ? "" : ' loading="lazy"';
     container.innerHTML = items
       .map(
         (item, index) => `
@@ -312,7 +313,7 @@ const renderImageCollections = () => {
               <img
                 src="${item.src}"
                 alt="${item.title}"
-                loading="${imageLoading}"
+                ${loadingAttribute}
                 decoding="async"
                 fetchpriority="${imageLoading === "eager" && index < 4 ? "high" : "auto"}"
               />
@@ -326,6 +327,22 @@ const renderImageCollections = () => {
         `
       )
       .join("");
+  });
+};
+
+const eagerImagePreloaders = [];
+
+const preloadEagerImageCollections = () => {
+  document.querySelectorAll('[data-image-collection][data-image-loading="eager"]').forEach((container) => {
+    const items = imageCollections[container.dataset.imageCollection] || [];
+
+    items.forEach((item, index) => {
+      const preloadImage = new Image();
+      preloadImage.decoding = "async";
+      preloadImage.fetchPriority = index < 6 ? "high" : "low";
+      preloadImage.src = item.src;
+      eagerImagePreloaders.push(preloadImage);
+    });
   });
 };
 
@@ -359,3 +376,4 @@ const renderVideoCollections = () => {
 
 renderImageCollections();
 renderVideoCollections();
+preloadEagerImageCollections();
