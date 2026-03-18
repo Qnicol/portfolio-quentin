@@ -306,6 +306,10 @@ const galleryObserverOptions = {
   threshold: 0.1,
   rootMargin: "200px 0px",
 };
+const videoPreviewObserverOptions = {
+  threshold: 0.1,
+  rootMargin: "240px 0px",
+};
 
 const finalizeGalleryImage = (image) => {
   const mediaFrame = image.closest(".media-card__media");
@@ -399,12 +403,20 @@ const renderVideoCollections = () => {
     const items = videoCollections[container.dataset.videoCollection] || [];
     container.innerHTML = items
       .map(
-        (item) => `
+        (item, index) => `
           <article class="video-card">
             <div class="video-card__media">
-              <video controls preload="metadata" playsinline>
-                <source src="${item.src}" type="video/mp4" />
+              <video
+                class="video-card__preview"
+                muted
+                loop
+                playsinline
+                preload="none"
+                data-src="${item.src}"
+                data-priority="${index < 2 ? "high" : "auto"}"
+              >
               </video>
+              <span class="video-card__preview-badge">Preview muette</span>
             </div>
             <div class="video-card__body">
               <p class="media-card__type">${item.type}</p>
@@ -422,6 +434,81 @@ const renderVideoCollections = () => {
   });
 };
 
+const startVideoPreview = (video) => {
+  if (!video.dataset.loaded) {
+    const source = document.createElement("source");
+    source.src = video.dataset.src;
+    source.type = "video/mp4";
+    video.appendChild(source);
+    video.dataset.loaded = "true";
+    video.load();
+  }
+
+  const mediaFrame = video.closest(".video-card__media");
+  mediaFrame?.classList.add("is-loaded");
+
+  const playPromise = video.play();
+  if (playPromise && typeof playPromise.catch === "function") {
+    playPromise.catch(() => {});
+  }
+};
+
+const pauseVideoPreview = (video) => {
+  video.pause();
+};
+
+const observeVideoPreviews = () => {
+  const videos = [...document.querySelectorAll(".video-card__preview[data-src]")];
+
+  if (!videos.length) {
+    return;
+  }
+
+  const shouldForceImmediateLoad = !("IntersectionObserver" in window);
+
+  videos.forEach((video) => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.autoplay = true;
+
+    video.addEventListener(
+      "loadeddata",
+      () => {
+        video.closest(".video-card__media")?.classList.add("is-loaded");
+      },
+      { once: true }
+    );
+  });
+
+  if (shouldForceImmediateLoad) {
+    videos.forEach((video) => startVideoPreview(video));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+
+      if (entry.isIntersecting || entry.intersectionRatio >= 0.1) {
+        startVideoPreview(video);
+        return;
+      }
+
+      pauseVideoPreview(video);
+    });
+  }, videoPreviewObserverOptions);
+
+  videos.forEach((video, index) => {
+    if (index < 2) {
+      startVideoPreview(video);
+    }
+
+    observer.observe(video);
+  });
+};
+
 renderImageCollections();
 renderVideoCollections();
 observeGalleryImages();
+observeVideoPreviews();
