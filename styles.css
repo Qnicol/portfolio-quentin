@@ -800,6 +800,24 @@ img {
   line-height: 1.45;
 }
 
+.project-spotlight__visual-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  margin-top: 0.2rem;
+  color: #eef7ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.project-spotlight__visual-cta span {
+  color: var(--accent);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
 .project-spotlight__visual-link:hover {
   transform: translateY(-2px);
   border-color: rgba(103, 215, 255, 0.34);
@@ -812,6 +830,11 @@ img {
 .project-spotlight__visual-link:hover .project-spotlight__visual-meta {
   border-color: rgba(103, 215, 255, 0.28);
   background: rgba(10, 15, 26, 0.92);
+}
+
+.project-spotlight__visual-link:hover .project-spotlight__visual-cta,
+.project-spotlight__visual-link:focus-visible .project-spotlight__visual-cta {
+  color: #ffffff;
 }
 
 .project-spotlight__visual-link:focus-visible {
