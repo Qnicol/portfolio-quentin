@@ -93,6 +93,68 @@ document.querySelectorAll("[data-panel]").forEach((panel) => {
   });
 });
 
+document.querySelectorAll(".competence-grid").forEach((grid) => {
+  const cards = Array.from(grid.querySelectorAll(".competence-card"));
+
+  if (!cards.length) {
+    return;
+  }
+
+  const usesFinePointer = () =>
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  const setSelectedCard = (nextCard) => {
+    let hasSelected = false;
+
+    cards.forEach((card) => {
+      const isSelected = card === nextCard;
+      card.classList.toggle("is-selected", isSelected);
+      hasSelected ||= isSelected;
+    });
+
+    grid.classList.toggle("has-selection", hasSelected);
+  };
+
+  cards.forEach((card) => {
+    card.addEventListener("pointerenter", () => {
+      if (usesFinePointer()) {
+        setSelectedCard(card);
+      }
+    });
+
+    card.addEventListener("focusin", () => {
+      setSelectedCard(card);
+    });
+
+    card.addEventListener("click", () => {
+      if (usesFinePointer()) {
+        return;
+      }
+
+      const shouldDeselect = card.classList.contains("is-selected");
+      setSelectedCard(shouldDeselect ? null : card);
+    });
+  });
+
+  grid.addEventListener("pointerleave", () => {
+    if (usesFinePointer()) {
+      setSelectedCard(null);
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (usesFinePointer()) {
+      return;
+    }
+
+    if (grid.contains(event.target)) {
+      return;
+    }
+
+    setSelectedCard(null);
+  });
+});
+
 const getScrollOffset = () => {
   if (!topbar) {
     return 24;

@@ -603,6 +603,7 @@ img {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
   align-items: stretch;
+  perspective: 1600px;
 }
 
 .competence-card {
@@ -623,9 +624,13 @@ img {
     inset 0 1px 0 rgba(255, 255, 255, 0.04),
     0 24px 48px rgba(4, 8, 19, 0.22);
   transition:
-    transform 220ms ease,
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
     border-color 180ms ease,
-    box-shadow 220ms ease;
+    box-shadow 220ms ease,
+    opacity 220ms ease,
+    filter 220ms ease;
+  transform-origin: center center;
+  cursor: pointer;
 }
 
 .competence-card::after {
@@ -641,12 +646,14 @@ img {
   z-index: -1;
 }
 
-.competence-card:hover {
+.competence-card:hover,
+.competence-card.is-selected {
   border-color: rgba(141, 214, 255, 0.28);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 30px 64px rgba(4, 8, 19, 0.3);
-  transform: translateY(-5px);
+    0 34px 72px rgba(4, 8, 19, 0.34);
+  transform: translate3d(0, -10px, 0) scale(1.045);
+  z-index: 3;
 }
 
 .competence-card__media {
@@ -743,22 +750,36 @@ img {
   opacity: 0.78;
 }
 
-.competence-card:hover .competence-card__video {
+.competence-card:hover .competence-card__video,
+.competence-card.is-selected .competence-card__video {
   opacity: 0.48;
   filter: saturate(1) brightness(0.74) blur(0);
   transform: scale(1.02);
 }
 
-.competence-card:hover .competence-card__media-base {
+.competence-card:hover .competence-card__media-base,
+.competence-card.is-selected .competence-card__media-base {
   transform: scale(1.04);
   filter: saturate(1.06) brightness(1);
 }
 
-.competence-card:hover .competence-card__media-layer {
+.competence-card:hover .competence-card__media-layer,
+.competence-card.is-selected .competence-card__media-layer {
   transform: var(--layer-transform-hover, var(--layer-transform, none));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.14),
     0 22px 40px rgba(4, 8, 19, 0.38);
+}
+
+.competence-card.is-selected::after {
+  opacity: 0.94;
+  height: 92px;
+}
+
+.competence-card.is-selected .competence-card__icon {
+  border-color: rgba(159, 227, 255, 0.22);
+  background: rgba(16, 26, 48, 0.74);
+  box-shadow: 0 12px 28px rgba(18, 33, 60, 0.34);
 }
 
 .competence-card__icon {
@@ -919,6 +940,23 @@ img {
 
 .competence-card--editorial .competence-card__media img {
   object-position: center top;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .competence-grid:hover .competence-card {
+    opacity: 0.74;
+    filter: saturate(0.84);
+    transform: translate3d(0, 8px, 0) scale(0.965);
+    z-index: 1;
+  }
+
+  .competence-grid:hover .competence-card:hover,
+  .competence-grid:hover .competence-card.is-selected {
+    opacity: 1;
+    filter: none;
+    transform: translate3d(0, -12px, 0) scale(1.06);
+    z-index: 4;
+  }
 }
 
 .media-gallery {
