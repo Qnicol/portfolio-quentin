@@ -103,15 +103,7 @@
           </aside>
         </section>
 
-        <section
-          class="panel section-panel section-panel--expertise-preview reveal"
-          data-panel
-          data-hover-preview-panel
-        >
-          <div class="section-panel__preview" aria-hidden="true">
-            <div class="section-panel__preview-media" data-preview-surface></div>
-          </div>
-
+        <section class="panel section-panel reveal" data-panel>
           <div class="section-block__header">
             <div>
               <p class="eyebrow">Domaines</p>
@@ -124,19 +116,41 @@
           </div>
 
           <div class="competence-grid">
-            <article
-              class="competence-card"
-              id="design-graphique"
-              tabindex="0"
-              data-preview-image="assets/experience/support-communication-01.webp"
-              data-preview-position="center center"
-            >
-              <span class="competence-card__icon">Adobe</span>
-              <h3>Design graphique</h3>
-              <p>
-                Affiches, présentations, supports pour les réseaux sociaux et
-                éléments de communication conçus pour être lisibles et cohérents.
-              </p>
+            <article class="competence-card competence-card--design" id="design-graphique">
+              <div class="competence-card__media competence-card__media--scene competence-card__media--design">
+                <img
+                  class="competence-card__media-base"
+                  src="assets/expertises/design-graphique-card.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <img
+                  class="competence-card__media-layer competence-card__media-layer--design-main"
+                  src="assets/experience/support-communication-02.webp"
+                  alt=""
+                  loading="lazy"
+                />
+                <img
+                  class="competence-card__media-layer competence-card__media-layer--design-sheet-a"
+                  src="assets/experience/support-communication-01.webp"
+                  alt=""
+                  loading="lazy"
+                />
+                <img
+                  class="competence-card__media-layer competence-card__media-layer--design-sheet-b"
+                  src="assets/experience/support-communication-02.webp"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="competence-card__icon">Adobe</span>
+              </div>
+              <div class="competence-card__body">
+                <h3>Design graphique</h3>
+                <p>
+                  Affiches, présentations, supports pour les réseaux sociaux et
+                  éléments de communication conçus pour être lisibles et cohérents.
+                </p>
+              </div>
               <div class="skill-tags">
                 <span>Photoshop</span>
                 <span>Illustrator</span>
@@ -144,19 +158,35 @@
               </div>
             </article>
 
-            <article
-              class="competence-card competence-card--accent"
-              id="montage-video"
-              tabindex="0"
-              data-preview-image="assets/experience/video-premiere.webp"
-              data-preview-position="center center"
-            >
-              <span class="competence-card__icon">Motion</span>
-              <h3>Montage vidéo</h3>
-              <p>
-                Vidéos, teasers, reels et habillages pour des contenus courts
-                ou plus développés, avec un travail sur le rythme et la clarté.
-              </p>
+            <article class="competence-card competence-card--motion" id="montage-video">
+              <div class="competence-card__media competence-card__media--scene competence-card__media--motion">
+                <img
+                  class="competence-card__media-base"
+                  src="assets/expertises/montage-video-card.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <img
+                  class="competence-card__media-layer competence-card__media-layer--video-main"
+                  src="assets/experience/video-premiere.webp"
+                  alt=""
+                  loading="lazy"
+                />
+                <img
+                  class="competence-card__media-layer competence-card__media-layer--video-phone"
+                  src="assets/video-previews/reel-v22.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="competence-card__icon">Motion</span>
+              </div>
+              <div class="competence-card__body">
+                <h3>Montage vidéo</h3>
+                <p>
+                  Vidéos, teasers, reels et habillages pour des contenus courts
+                  ou plus développés, avec un travail sur le rythme et la clarté.
+                </p>
+              </div>
               <div class="skill-tags">
                 <span>Premiere Pro</span>
                 <span>After Effects</span>
@@ -164,19 +194,23 @@
               </div>
             </article>
 
-            <article
-              class="competence-card"
-              id="modelisation-rendu"
-              tabindex="0"
-              data-preview-image="assets/profile-abstract.svg"
-              data-preview-position="center center"
-            >
-              <span class="competence-card__icon">3D</span>
-              <h3>Modélisation & rendu</h3>
-              <p>
-                Conception d'objets, de scènes et de rendus 3D pour enrichir un
-                support visuel ou renforcer une présentation multimédia.
-              </p>
+            <article class="competence-card competence-card--three" id="modelisation-rendu">
+              <div class="competence-card__media">
+                <img
+                  class="competence-card__media-base competence-card__media-base--solo"
+                  src="assets/expertises/modelisation-rendu-card.svg"
+                  alt="Illustration 3D sombre avec formes, volume et rendu lumineux"
+                  loading="lazy"
+                />
+                <span class="competence-card__icon">3D</span>
+              </div>
+              <div class="competence-card__body">
+                <h3>Modélisation & rendu</h3>
+                <p>
+                  Conception d'objets, de scènes et de rendus 3D pour enrichir un
+                  support visuel ou renforcer une présentation multimédia.
+                </p>
+              </div>
               <div class="skill-tags">
                 <span>Blender</span>
                 <span>Cinema 4D</span>
@@ -184,19 +218,41 @@
               </div>
             </article>
 
-            <article
-              class="competence-card"
-              id="supports-digitaux"
-              tabindex="0"
-              data-preview-image="assets/armee/06dfa4a4-46e9-4b25-bc2d-59625dceeec2_rw_1920.webp"
-              data-preview-position="center center"
-            >
-              <span class="competence-card__icon">Prod</span>
-              <h3>Production éditoriale</h3>
-              <p>
-                Organisation, déclinaison de formats et adaptation du contenu
-                selon le canal de diffusion et le contexte du projet.
-              </p>
+            <article class="competence-card competence-card--editorial" id="supports-digitaux">
+              <div class="competence-card__media competence-card__media--scene competence-card__media--editorial">
+                <img
+                  class="competence-card__media-base"
+                  src="assets/expertises/production-editoriale-card.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <img
+                  class="competence-card__media-layer competence-card__media-layer--editorial-tablet"
+                  src="assets/armee/06dfa4a4-46e9-4b25-bc2d-59625dceeec2_rw_1920.webp"
+                  alt=""
+                  loading="lazy"
+                />
+                <img
+                  class="competence-card__media-layer competence-card__media-layer--editorial-paper-top"
+                  src="assets/armee/0f9fcf0b-ad99-42cc-853f-467d7204ae5f_rw_1200.webp"
+                  alt=""
+                  loading="lazy"
+                />
+                <img
+                  class="competence-card__media-layer competence-card__media-layer--editorial-paper-right"
+                  src="assets/armee/f5c57bfb-8886-4093-a462-a86238e83ab0_rw_1920.webp"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="competence-card__icon">Édito</span>
+              </div>
+              <div class="competence-card__body">
+                <h3>Production éditoriale</h3>
+                <p>
+                  Organisation, déclinaison de formats et adaptation du contenu
+                  selon le canal de diffusion et le contexte du projet.
+                </p>
+              </div>
               <div class="skill-tags">
                 <span>Print</span>
                 <span>Digital</span>

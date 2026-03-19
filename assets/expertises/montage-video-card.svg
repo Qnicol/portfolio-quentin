@@ -1,0 +1,88 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="90" x2="1038" y2="1412" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162247"/>
+      <stop offset="0.58" stop-color="#0B1227"/>
+      <stop offset="1" stop-color="#060A14"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(852 202) rotate(90) scale(300 350)">
+      <stop stop-color="#6EDBFF" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#6EDBFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(334 1210) rotate(90) scale(260 320)">
+      <stop stop-color="#FFAA6B" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#FFAA6B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="118" y1="140" x2="1060" y2="1364" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121E39" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#0A111F" stop-opacity="0.98"/>
+    </linearGradient>
+    <clipPath id="video-screen">
+      <rect x="166" y="418" width="732" height="560" rx="40"/>
+    </clipPath>
+    <clipPath id="phone-screen">
+      <rect x="150" y="822" width="188" height="336" rx="30"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="1500" rx="56" fill="url(#bg)"/>
+  <rect x="34" y="34" width="1132" height="1432" rx="44" stroke="#7BCFFF" stroke-opacity="0.18"/>
+  <circle cx="852" cy="202" r="312" fill="url(#glowA)"/>
+  <circle cx="334" cy="1210" r="280" fill="url(#glowB)"/>
+
+  <rect x="90" y="120" width="1020" height="1260" rx="40" fill="url(#panel)" stroke="#89DBFF" stroke-opacity="0.16"/>
+
+  <g opacity="0.95">
+    <rect x="246" y="176" width="132" height="104" rx="24" fill="#14294C" stroke="#7DD6FF" stroke-opacity="0.28"/>
+    <rect x="394" y="176" width="132" height="104" rx="24" fill="#14294C" stroke="#7DD6FF" stroke-opacity="0.28"/>
+    <rect x="542" y="176" width="132" height="104" rx="24" fill="#14294C" stroke="#7DD6FF" stroke-opacity="0.28"/>
+    <path d="M442 204L488 228L442 252V204Z" fill="#EAF8FF" fill-opacity="0.86"/>
+    <rect x="274" y="206" width="78" height="12" rx="6" fill="#EAF8FF" fill-opacity="0.74"/>
+    <rect x="274" y="230" width="62" height="12" rx="6" fill="#6EDBFF" fill-opacity="0.9"/>
+    <path d="M568 244H592V214H568V244ZM606 244H630V194H606V244ZM644 244H668V176H644V244Z" fill="#8BE4FF"/>
+  </g>
+
+  <g>
+    <rect x="144" y="390" width="776" height="662" rx="48" fill="#0A1223" stroke="#88DBFF" stroke-opacity="0.24"/>
+    <rect x="166" y="418" width="732" height="560" rx="40" fill="#091221"/>
+    <g clip-path="url(#video-screen)">
+      <image href="../experience/video-premiere.webp" x="166" y="418" width="732" height="560" preserveAspectRatio="xMidYMid slice"/>
+    </g>
+    <rect x="190" y="1006" width="198" height="18" rx="9" fill="#6EDBFF" fill-opacity="0.82"/>
+    <rect x="404" y="1006" width="154" height="18" rx="9" fill="#B8EFFF" fill-opacity="0.56"/>
+    <rect x="574" y="1006" width="132" height="18" rx="9" fill="#7C89FF" fill-opacity="0.48"/>
+    <rect x="722" y="1006" width="132" height="18" rx="9" fill="#9CE7FF" fill-opacity="0.52"/>
+  </g>
+
+  <g transform="rotate(-10 244 996)">
+    <rect x="122" y="794" width="244" height="396" rx="34" fill="#101B34" stroke="#8AD9FF" stroke-opacity="0.28"/>
+    <rect x="150" y="822" width="188" height="336" rx="30" fill="#0D1730"/>
+    <g clip-path="url(#phone-screen)">
+      <image href="../video-previews/reel-v22.jpg" x="150" y="822" width="188" height="336" preserveAspectRatio="xMidYMid slice"/>
+    </g>
+  </g>
+
+  <g>
+    <circle cx="942" cy="984" r="82" fill="#0C162B" stroke="#7DD6FF" stroke-opacity="0.24"/>
+    <circle cx="942" cy="984" r="34" fill="#091321" stroke="#C4F1FF" stroke-opacity="0.78" stroke-width="18"/>
+    <circle cx="942" cy="984" r="10" fill="#6EDBFF"/>
+  </g>
+
+  <g>
+    <rect x="766" y="842" width="246" height="154" rx="28" fill="#111B34" stroke="#7DD6FF" stroke-opacity="0.18"/>
+    <rect x="802" y="884" width="174" height="18" rx="9" fill="#EAF8FF" fill-opacity="0.78"/>
+    <rect x="802" y="920" width="148" height="12" rx="6" fill="#6EDBFF" fill-opacity="0.76"/>
+    <rect x="802" y="950" width="116" height="12" rx="6" fill="#FFB06C" fill-opacity="0.68"/>
+  </g>
+
+  <rect x="128" y="1170" width="944" height="160" rx="34" fill="#09111F" fill-opacity="0.8" stroke="#8BDFFF" stroke-opacity="0.14"/>
+  <rect x="166" y="1210" width="214" height="18" rx="9" fill="#EAF8FF" fill-opacity="0.82"/>
+  <rect x="166" y="1244" width="418" height="16" rx="8" fill="#C0EDFF" fill-opacity="0.5"/>
+  <rect x="166" y="1272" width="296" height="16" rx="8" fill="#8CDEFF" fill-opacity="0.42"/>
+  <rect x="718" y="1228" width="236" height="52" rx="26" fill="#13264A" stroke="#75D4FF" stroke-opacity="0.24"/>
+  <rect x="746" y="1248" width="116" height="12" rx="6" fill="#EAF8FF" fill-opacity="0.78"/>
+  <path d="M904 1244L936 1260L904 1276V1244Z" fill="#6EDBFF"/>
+
+  <ellipse cx="604" cy="1118" rx="336" ry="46" fill="#6EDBFF" fill-opacity="0.2"/>
+  <ellipse cx="604" cy="1118" rx="238" ry="18" fill="#6EDBFF" fill-opacity="0.38"/>
+</svg>

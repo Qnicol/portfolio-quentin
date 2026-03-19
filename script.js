@@ -93,47 +93,6 @@ document.querySelectorAll("[data-panel]").forEach((panel) => {
   });
 });
 
-document.querySelectorAll("[data-hover-preview-panel]").forEach((panel) => {
-  const previewSurface = panel.querySelector("[data-preview-surface]");
-  const previewCards = Array.from(panel.querySelectorAll("[data-preview-image]"));
-
-  if (!previewSurface || !previewCards.length) {
-    return;
-  }
-
-  const defaultCard = previewCards[0];
-
-  const setPreview = (card) => {
-    const image = card?.dataset.previewImage;
-    const position = card?.dataset.previewPosition || "center center";
-
-    if (!image) {
-      return;
-    }
-
-    previewSurface.style.backgroundImage = `url("${image}")`;
-    previewSurface.style.backgroundPosition = position;
-    panel.classList.add("has-preview");
-
-    previewCards.forEach((item) => {
-      item.classList.toggle("is-preview-active", item === card);
-    });
-  };
-
-  setPreview(defaultCard);
-
-  previewCards.forEach((card) => {
-    card.addEventListener("pointerenter", () => setPreview(card));
-    card.addEventListener("focusin", () => setPreview(card));
-  });
-
-  panel.addEventListener("pointerleave", () => {
-    if (window.matchMedia("(hover: hover)").matches) {
-      setPreview(defaultCard);
-    }
-  });
-});
-
 const getScrollOffset = () => {
   if (!topbar) {
     return 24;

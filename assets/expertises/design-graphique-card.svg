@@ -1,0 +1,104 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="78" x2="1036" y2="1418" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18254A"/>
+      <stop offset="0.58" stop-color="#0B132A"/>
+      <stop offset="1" stop-color="#070B16"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(880 220) rotate(90) scale(290 340)">
+      <stop stop-color="#71DDFF" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#71DDFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(306 1280) rotate(90) scale(240 320)">
+      <stop stop-color="#6D63FF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#6D63FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="144" y1="160" x2="1036" y2="1348" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101C35" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#09111F" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="254" y1="396" x2="854" y2="1190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A9ECFF" stop-opacity="0.32"/>
+      <stop offset="0.32" stop-color="#5AA9FF" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#0B1733" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="screen-main">
+      <rect x="160" y="450" width="644" height="454" rx="34"/>
+    </clipPath>
+    <clipPath id="screen-side-top">
+      <rect x="730" y="510" width="254" height="342" rx="26"/>
+    </clipPath>
+    <clipPath id="screen-side-bottom">
+      <rect x="878" y="620" width="182" height="258" rx="22"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="1500" rx="56" fill="url(#bg)"/>
+  <rect x="34" y="34" width="1132" height="1432" rx="44" stroke="#7BCFFF" stroke-opacity="0.18"/>
+  <circle cx="880" cy="220" r="300" fill="url(#glowA)"/>
+  <circle cx="306" cy="1280" r="260" fill="url(#glowB)"/>
+
+  <g opacity="0.18" stroke="#8AE3FF">
+    <path d="M114 324H1086"/>
+    <path d="M114 632H1086"/>
+    <path d="M114 940H1086"/>
+    <path d="M114 1248H1086"/>
+  </g>
+
+  <rect x="88" y="120" width="1024" height="1260" rx="40" fill="url(#panel)" stroke="#8AD9FF" stroke-opacity="0.16"/>
+  <rect x="106" y="138" width="988" height="1224" rx="34" stroke="rgba(255,255,255,0.08)" stroke-opacity="0.14"/>
+
+  <g opacity="0.92">
+    <rect x="728" y="174" width="112" height="98" rx="22" fill="#13274A" stroke="#79D5FF" stroke-opacity="0.28"/>
+    <rect x="852" y="174" width="112" height="98" rx="22" fill="#13274A" stroke="#79D5FF" stroke-opacity="0.28"/>
+    <rect x="976" y="174" width="74" height="98" rx="22" fill="#13274A" stroke="#79D5FF" stroke-opacity="0.28"/>
+    <rect x="756" y="196" width="56" height="16" rx="8" fill="#EAF8FF" fill-opacity="0.7"/>
+    <rect x="756" y="222" width="74" height="10" rx="5" fill="#6FDBFF" fill-opacity="0.88"/>
+    <path d="M888 198H944V230H888V198Z" fill="#6FDBFF" fill-opacity="0.9"/>
+    <path d="M1000 196H1022V244H1000V196Z" fill="#6FDBFF" fill-opacity="0.85"/>
+    <path d="M1028 208H1042V244H1028V208Z" fill="#EAF8FF" fill-opacity="0.72"/>
+  </g>
+
+  <g>
+    <rect x="138" y="430" width="688" height="600" rx="44" fill="#0B1427" stroke="#88DBFF" stroke-opacity="0.22"/>
+    <rect x="160" y="450" width="644" height="454" rx="34" fill="#0C1730"/>
+    <g clip-path="url(#screen-main)">
+      <image href="../experience/support-communication-02.webp" x="160" y="450" width="644" height="454" preserveAspectRatio="xMidYMid slice"/>
+    </g>
+    <rect x="182" y="950" width="146" height="18" rx="9" fill="#6FDBFF" fill-opacity="0.82"/>
+    <rect x="346" y="950" width="112" height="18" rx="9" fill="#B7EEFF" fill-opacity="0.66"/>
+    <rect x="476" y="950" width="86" height="18" rx="9" fill="#5F71FF" fill-opacity="0.6"/>
+    <rect x="580" y="950" width="164" height="18" rx="9" fill="#90E3FF" fill-opacity="0.54"/>
+    <rect x="220" y="1000" width="128" height="88" rx="24" fill="#132649" fill-opacity="0.78"/>
+    <rect x="364" y="1000" width="128" height="88" rx="24" fill="#172C59" fill-opacity="0.7"/>
+    <rect x="508" y="1000" width="128" height="88" rx="24" fill="#101E3C" fill-opacity="0.78"/>
+  </g>
+
+  <g>
+    <rect x="700" y="480" width="312" height="420" rx="32" fill="#101A33" stroke="#89DBFF" stroke-opacity="0.26"/>
+    <rect x="730" y="510" width="254" height="342" rx="26" fill="#0C1730"/>
+    <g clip-path="url(#screen-side-top)">
+      <image href="../experience/support-communication-01.webp" x="730" y="510" width="254" height="342" preserveAspectRatio="xMidYMid slice"/>
+    </g>
+    <rect x="760" y="876" width="168" height="18" rx="9" fill="#EAF8FF" fill-opacity="0.86"/>
+    <rect x="760" y="906" width="140" height="12" rx="6" fill="#8CDEFF" fill-opacity="0.72"/>
+  </g>
+
+  <g transform="rotate(8 950 770)">
+    <rect x="854" y="602" width="224" height="308" rx="26" fill="#111B36" stroke="#7FD6FF" stroke-opacity="0.26"/>
+    <rect x="878" y="620" width="182" height="258" rx="22" fill="#0D1730"/>
+    <g clip-path="url(#screen-side-bottom)">
+      <image href="../experience/support-communication-02.webp" x="878" y="620" width="182" height="258" preserveAspectRatio="xMidYMid slice"/>
+    </g>
+  </g>
+
+  <rect x="150" y="1118" width="900" height="176" rx="34" fill="#0B1120" fill-opacity="0.76" stroke="#8AD9FF" stroke-opacity="0.16"/>
+  <rect x="182" y="1150" width="180" height="16" rx="8" fill="#6EDCFF" fill-opacity="0.86"/>
+  <rect x="182" y="1186" width="258" height="24" rx="12" fill="#EAF8FF" fill-opacity="0.82"/>
+  <rect x="182" y="1228" width="424" height="16" rx="8" fill="#C1EDFF" fill-opacity="0.46"/>
+  <rect x="182" y="1256" width="376" height="16" rx="8" fill="#91DFFF" fill-opacity="0.42"/>
+
+  <ellipse cx="604" cy="1088" rx="324" ry="44" fill="#6EDCFF" fill-opacity="0.24"/>
+  <ellipse cx="604" cy="1088" rx="246" ry="20" fill="#6EDCFF" fill-opacity="0.4"/>
+  <rect x="88" y="120" width="1024" height="1260" rx="40" fill="url(#glass)"/>
+</svg>
