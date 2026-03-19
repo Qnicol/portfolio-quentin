@@ -1333,14 +1333,15 @@ img {
 .profile-card__socials span {
   display: grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.09);
   background: rgba(255, 255, 255, 0.03);
   color: #eef4ff;
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 .profile-card__socials a:hover {
@@ -1397,6 +1398,43 @@ img {
   margin: 0;
   color: #d2dcef;
   line-height: 1.8;
+}
+
+.about-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.about-fact {
+  display: grid;
+  gap: 0.45rem;
+  padding: 18px;
+  border-radius: calc(var(--radius-xl) - 0.8rem);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background:
+    radial-gradient(circle at top right, rgba(103, 215, 255, 0.1), transparent 34%),
+    rgba(255, 255, 255, 0.02);
+}
+
+.about-fact__label {
+  color: rgba(255, 255, 255, 0.52);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.76rem;
+}
+
+.about-fact strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: -0.03em;
+}
+
+.about-fact p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .timeline-section {
@@ -1509,6 +1547,12 @@ img {
   padding: 28px;
 }
 
+.contact-side-panel {
+  background:
+    radial-gradient(circle at top right, rgba(103, 215, 255, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(18, 24, 40, 0.9), rgba(8, 11, 19, 0.96));
+}
+
 .contact-section-title {
   margin: 0 0 1.2rem;
   font-family: "Space Grotesk", sans-serif;
@@ -1596,14 +1640,21 @@ img {
 .contact-cta-button {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-height: 54px;
-  padding: 0 1rem;
+  padding: 0 1.05rem 0 1.15rem;
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
+  color: #eef5ff;
   font-weight: 700;
   transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.contact-cta-button::after {
+  content: "→";
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 1rem;
 }
 
 .contact-cta-button:hover {
@@ -1615,6 +1666,10 @@ img {
 .contact-cta-button--primary {
   background: linear-gradient(90deg, var(--accent-2), #5d9dff 52%, #72d6ff);
   border-color: transparent;
+  color: #f8fbff;
+}
+
+.contact-cta-button--primary::after {
   color: #f8fbff;
 }
 
@@ -1636,7 +1691,8 @@ img {
     rgba(255, 255, 255, 0.03);
   color: #eef4ff;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
   transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
@@ -1772,6 +1828,10 @@ img {
   .about-section,
   .timeline-section {
     padding: 22px;
+  }
+
+  .about-facts {
+    grid-template-columns: 1fr;
   }
 
   .contact-info-panel,
