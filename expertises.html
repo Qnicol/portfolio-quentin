@@ -103,7 +103,15 @@
           </aside>
         </section>
 
-        <section class="panel section-panel reveal" data-panel>
+        <section
+          class="panel section-panel section-panel--expertise-preview reveal"
+          data-panel
+          data-hover-preview-panel
+        >
+          <div class="section-panel__preview" aria-hidden="true">
+            <div class="section-panel__preview-media" data-preview-surface></div>
+          </div>
+
           <div class="section-block__header">
             <div>
               <p class="eyebrow">Domaines</p>
@@ -116,7 +124,13 @@
           </div>
 
           <div class="competence-grid">
-            <article class="competence-card" id="design-graphique">
+            <article
+              class="competence-card"
+              id="design-graphique"
+              tabindex="0"
+              data-preview-image="assets/experience/support-communication-01.webp"
+              data-preview-position="center center"
+            >
               <span class="competence-card__icon">Adobe</span>
               <h3>Design graphique</h3>
               <p>
@@ -130,7 +144,13 @@
               </div>
             </article>
 
-            <article class="competence-card competence-card--accent" id="montage-video">
+            <article
+              class="competence-card competence-card--accent"
+              id="montage-video"
+              tabindex="0"
+              data-preview-image="assets/experience/video-premiere.webp"
+              data-preview-position="center center"
+            >
               <span class="competence-card__icon">Motion</span>
               <h3>Montage vidéo</h3>
               <p>
@@ -144,7 +164,13 @@
               </div>
             </article>
 
-            <article class="competence-card" id="modelisation-rendu">
+            <article
+              class="competence-card"
+              id="modelisation-rendu"
+              tabindex="0"
+              data-preview-image="assets/profile-abstract.svg"
+              data-preview-position="center center"
+            >
               <span class="competence-card__icon">3D</span>
               <h3>Modélisation & rendu</h3>
               <p>
@@ -158,7 +184,13 @@
               </div>
             </article>
 
-            <article class="competence-card" id="supports-digitaux">
+            <article
+              class="competence-card"
+              id="supports-digitaux"
+              tabindex="0"
+              data-preview-image="assets/armee/06dfa4a4-46e9-4b25-bc2d-59625dceeec2_rw_1920.webp"
+              data-preview-position="center center"
+            >
               <span class="competence-card__icon">Prod</span>
               <h3>Production éditoriale</h3>
               <p>
