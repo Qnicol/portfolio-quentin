@@ -93,7 +93,7 @@ document.querySelectorAll("[data-panel]").forEach((panel) => {
   });
 });
 
-document.querySelectorAll(".competence-grid").forEach((grid) => {
+document.querySelectorAll(".competence-grid--interactive").forEach((grid) => {
   const cards = Array.from(grid.querySelectorAll(".competence-card"));
 
   if (!cards.length) {

@@ -630,7 +630,6 @@ img {
     opacity 220ms ease,
     filter 220ms ease;
   transform-origin: center center;
-  cursor: pointer;
 }
 
 .competence-card::after {
@@ -646,8 +645,19 @@ img {
   z-index: -1;
 }
 
-.competence-card:hover,
-.competence-card.is-selected {
+.competence-card:hover {
+  border-color: rgba(141, 214, 255, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 28px 56px rgba(4, 8, 19, 0.26);
+}
+
+.competence-grid--interactive .competence-card {
+  cursor: pointer;
+}
+
+.competence-grid--interactive .competence-card:hover,
+.competence-grid--interactive .competence-card.is-selected {
   border-color: rgba(141, 214, 255, 0.28);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
@@ -750,33 +760,33 @@ img {
   opacity: 0.78;
 }
 
-.competence-card:hover .competence-card__video,
-.competence-card.is-selected .competence-card__video {
+.competence-grid--interactive .competence-card:hover .competence-card__video,
+.competence-grid--interactive .competence-card.is-selected .competence-card__video {
   opacity: 0.48;
   filter: saturate(1) brightness(0.74) blur(0);
   transform: scale(1.02);
 }
 
-.competence-card:hover .competence-card__media-base,
-.competence-card.is-selected .competence-card__media-base {
+.competence-grid--interactive .competence-card:hover .competence-card__media-base,
+.competence-grid--interactive .competence-card.is-selected .competence-card__media-base {
   transform: scale(1.04);
   filter: saturate(1.06) brightness(1);
 }
 
-.competence-card:hover .competence-card__media-layer,
-.competence-card.is-selected .competence-card__media-layer {
+.competence-grid--interactive .competence-card:hover .competence-card__media-layer,
+.competence-grid--interactive .competence-card.is-selected .competence-card__media-layer {
   transform: var(--layer-transform-hover, var(--layer-transform, none));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.14),
     0 22px 40px rgba(4, 8, 19, 0.38);
 }
 
-.competence-card.is-selected::after {
+.competence-grid--interactive .competence-card.is-selected::after {
   opacity: 0.94;
   height: 92px;
 }
 
-.competence-card.is-selected .competence-card__icon {
+.competence-grid--interactive .competence-card.is-selected .competence-card__icon {
   border-color: rgba(159, 227, 255, 0.22);
   background: rgba(16, 26, 48, 0.74);
   box-shadow: 0 12px 28px rgba(18, 33, 60, 0.34);
@@ -808,6 +818,15 @@ img {
 .competence-card__body {
   display: grid;
   gap: 0.72rem;
+}
+
+.competence-card--simple {
+  padding-top: 74px;
+}
+
+.competence-card--simple .competence-card__icon {
+  top: 18px;
+  left: 18px;
 }
 
 .competence-card h3 {
@@ -943,15 +962,15 @@ img {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .competence-grid:hover .competence-card {
+  .competence-grid--interactive:hover .competence-card {
     opacity: 0.74;
     filter: saturate(0.84);
     transform: translate3d(0, 8px, 0) scale(0.965);
     z-index: 1;
   }
 
-  .competence-grid:hover .competence-card:hover,
-  .competence-grid:hover .competence-card.is-selected {
+  .competence-grid--interactive:hover .competence-card:hover,
+  .competence-grid--interactive:hover .competence-card.is-selected {
     opacity: 1;
     filter: none;
     transform: translate3d(0, -12px, 0) scale(1.06);
@@ -1860,7 +1879,7 @@ img {
 }
 
 @media (hover: none) {
-  .competence-card:hover {
+  .competence-grid--interactive .competence-card:hover {
     transform: none;
   }
 
