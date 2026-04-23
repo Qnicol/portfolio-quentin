@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Univers 3D | Quentin Nicol</title>
+    <meta
+      name="description"
+      content="Univers 3D du portfolio de Quentin Nicol : rendus, sc&egrave;nes, direction visuelle et int&eacute;gration multim&eacute;dia."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="portfolio-pages.css" />
+    <link rel="stylesheet" href="shared-nav.css" />
+  </head>
+  <body data-page="expertises">
+    <div class="subpage-shell">
+      <header class="topbar reveal" data-mobile-nav>
+        <div class="topbar__primary">
+          <a class="brand" href="index.html" aria-label="Retour &agrave; l'accueil">
+            <span class="brand__mark">QN</span>
+            <span class="brand__text">
+              <strong>Nicol Quentin</strong>
+              <span>Portfolio num&eacute;rique</span>
+            </span>
+          </a>
+
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Ouvrir le menu"
+            data-menu-toggle
+          >
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+          </button>
+        </div>
+
+        <nav class="topnav" id="site-nav" aria-label="Navigation principale">
+          <a href="experience-professionnelle.html" data-nav-link data-nav-key="portfolio">
+            Portfolio
+          </a>
+          <a href="expertises.html" data-nav-link data-nav-key="expertises">Expertises</a>
+          <a href="certification.html" data-nav-link data-nav-key="about">&Agrave; propos</a>
+          <a href="contact.html" data-nav-link data-nav-key="contact">Contact</a>
+          <a
+            class="topnav__cta"
+            href="docs/quentin-nicol-cv.pdf"
+            data-nav-link
+            data-nav-key="cv"
+            target="_blank"
+            rel="noreferrer"
+          >
+            CV
+          </a>
+        </nav>
+      </header>
+
+      <main class="page-main three-lab-layout" data-wow-arena>
+        <section class="panel hero-panel three-lab-hero reveal" data-panel>
+          <div class="hero-copy">
+            <p class="eyebrow">P&ocirc;le 3D</p>
+            <h1>Univers 3D dynamique</h1>
+            <p>
+              Un espace d&eacute;di&eacute; aux rendus, aux sc&egrave;nes et aux directions
+              visuelles plus immersives. L'objectif : cr&eacute;er des visuels avec une
+              &eacute;nergie plus cin&eacute;matique, inspir&eacute;e des interfaces jeu vid&eacute;o.
+            </p>
+
+            <div class="tag-row" aria-label="Acc&egrave;s rapide 3D">
+              <a href="#showroom">Showroom</a>
+              <a href="#modes">Modes visuels</a>
+              <a href="#galerie-3d">Galerie</a>
+              <a href="#pipeline-3d">Pipeline</a>
+              <a href="videos-multimedia.html#reportages">Vid&eacute;os li&eacute;es</a>
+            </div>
+
+            <a class="three-lab-cta" href="#modes">
+              Entrer dans l'univers 3D
+              <span aria-hidden="true">&#8599;</span>
+            </a>
+          </div>
+
+          <aside class="three-lab-stage" aria-label="Aper&ccedil;u 3D">
+            <div class="three-lab-stage__chrome">
+              <span>Build</span>
+              <span>Render</span>
+              <span>FX</span>
+              <span>Play</span>
+            </div>
+
+            <div class="three-lab-stage__main" data-tilt-surface>
+              <div class="three-engine" data-3d-scene aria-hidden="true">
+                <div class="three-webgl" data-three-webgl></div>
+                <span class="three-webgl__badge" data-three-status>Chargement GLB</span>
+                <div class="three-engine__backdrop"></div>
+                <div class="three-engine__ring three-engine__ring--a"></div>
+                <div class="three-engine__ring three-engine__ring--b"></div>
+                <div class="three-engine__floor"></div>
+
+                <div class="three-engine__cluster">
+                  <figure class="three-engine__panel three-engine__panel--center">
+                    <img
+                      src="assets/expertises/modelisation-rendu-card.svg"
+                      alt=""
+                      loading="eager"
+                    />
+                  </figure>
+
+                  <figure class="three-engine__panel three-engine__panel--left">
+                    <img
+                      src="assets/experience/video-premiere.webp"
+                      alt=""
+                      loading="eager"
+                    />
+                  </figure>
+
+                  <figure class="three-engine__panel three-engine__panel--right">
+                    <img
+                      src="assets/experience/support-communication-02.webp"
+                      alt=""
+                      loading="eager"
+                    />
+                  </figure>
+
+                  <figure class="three-engine__panel three-engine__panel--front">
+                    <img
+                      src="assets/video-previews/reel-v22.jpg"
+                      alt=""
+                      loading="eager"
+                    />
+                  </figure>
+
+                  <div class="three-engine__orb"></div>
+                  <div class="three-engine__spark three-engine__spark--one"></div>
+                  <div class="three-engine__spark three-engine__spark--two"></div>
+                  <div class="three-engine__spark three-engine__spark--three"></div>
+                </div>
+
+                <div class="three-engine__hud">
+                  <span>Scene</span>
+                  <span>Light</span>
+                  <span>Camera</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="three-lab-stage__dock">
+              <article>
+                <strong>Session active</strong>
+                <p>Direction 3D, compositing, rendu final et personnage interactif.</p>
+                <div class="three-lab-stage__controls" aria-label="Contrôles scène 3D">
+                  <span>ZQSD / WASD</span>
+                  <span>Déplacement</span>
+                </div>
+              </article>
+              <a href="#pipeline-3d">
+                Ouvrir le pipeline
+                <span aria-hidden="true">&#8594;</span>
+              </a>
+            </div>
+          </aside>
+        </section>
+
+        <section class="panel section-panel reveal" id="showroom" data-panel>
+          <div class="section-block__header">
+            <div>
+              <p class="eyebrow">3D showcase</p>
+              <h2 class="section-block__title">Modes visuels</h2>
+            </div>
+            <p>
+              Chaque carte ouvre une partie du p&ocirc;le 3D. Le survol active une
+              mise en avant, comme une s&eacute;lection de niveau.
+            </p>
+          </div>
+
+          <div class="three-mode-grid" id="modes">
+            <a class="three-mode-card" href="#mode-scene">
+              <div class="three-mode-card__media" data-tilt-surface>
+                <span class="three-mode-card__badge">Scene</span>
+                <img
+                  src="assets/experience/video-premiere.webp"
+                  alt="Sc&egrave;nes et composition"
+                  loading="lazy"
+                />
+              </div>
+              <div class="three-mode-card__body">
+                <h3>Sc&egrave;nes &amp; composition</h3>
+                <p>Montage de plans, lumi&egrave;res et cam&eacute;ras.</p>
+              </div>
+            </a>
+
+            <a class="three-mode-card" href="#mode-render">
+              <div class="three-mode-card__media" data-tilt-surface>
+                <span class="three-mode-card__badge">Render</span>
+                <img
+                  src="assets/expertises/modelisation-rendu-card.svg"
+                  alt="Rendus stylis&eacute;s"
+                  loading="lazy"
+                />
+              </div>
+              <div class="three-mode-card__body">
+                <h3>Rendus stylis&eacute;s</h3>
+                <p>Mati&egrave;res, volumes et rendu final.</p>
+              </div>
+            </a>
+
+            <a class="three-mode-card" href="support-communication.html#variantes">
+              <div class="three-mode-card__media" data-tilt-surface>
+                <span class="three-mode-card__badge">UI</span>
+                <img
+                  src="assets/experience/support-communication-02.webp"
+                  alt="Int&eacute;gration 3D sur supports"
+                  loading="lazy"
+                />
+              </div>
+              <div class="three-mode-card__body">
+                <h3>Int&eacute;gration support</h3>
+                <p>Visuels 3D plac&eacute;s dans des livrables concrets.</p>
+              </div>
+            </a>
+
+            <a class="three-mode-card" href="videos-multimedia.html#campagnes-video">
+              <div class="three-mode-card__media" data-tilt-surface>
+                <span class="three-mode-card__badge">Motion</span>
+                <img
+                  src="assets/video-previews/reel-v22.jpg"
+                  alt="Habillage motion et 3D"
+                  loading="lazy"
+                />
+              </div>
+              <div class="three-mode-card__body">
+                <h3>Motion &amp; gameplay feel</h3>
+                <p>Habillage dynamique, transitions et rythme.</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="panel section-panel reveal" id="galerie-3d" data-panel>
+          <div class="section-block__header">
+            <div>
+              <p class="eyebrow">Immersion</p>
+              <h2 class="section-block__title">Galerie de r&eacute;f&eacute;rence</h2>
+            </div>
+            <p>
+              Un mur visuel plus dense pour donner du rythme &agrave; la page. Chaque
+              carte repr&eacute;sente un angle du travail 3D : textures, compositing,
+              mise en page et int&eacute;gration motion.
+            </p>
+          </div>
+
+          <div class="three-gallery-grid">
+            <article class="three-gallery-card three-gallery-card--wide">
+              <img
+                src="assets/experience/video-premiere.webp"
+                alt="Rendu principal avec interface de montage"
+                loading="lazy"
+              />
+              <div class="three-gallery-card__meta">
+                <strong>Frame principal</strong>
+                <span>Compositing et direction visuelle</span>
+              </div>
+            </article>
+
+            <article class="three-gallery-card three-gallery-card--portrait">
+              <img
+                src="assets/experience/support-communication-02.webp"
+                alt="Int&eacute;gration support visuel"
+                loading="lazy"
+              />
+              <div class="three-gallery-card__meta">
+                <strong>Support immersif</strong>
+                <span>Rendu intégré sur livrable</span>
+              </div>
+            </article>
+
+            <article class="three-gallery-card">
+              <img
+                src="assets/armee/f4c8ec6d-759b-49e7-bce5-364736041c47_rw_1920.webp"
+                alt="Planche visuelle de communication"
+                loading="lazy"
+              />
+              <div class="three-gallery-card__meta">
+                <strong>UI visuelle</strong>
+                <span>Informations et hi&eacute;rarchie</span>
+              </div>
+            </article>
+
+            <article class="three-gallery-card">
+              <img
+                src="assets/armee/06dfa4a4-46e9-4b25-bc2d-59625dceeec2_rw_1920.webp"
+                alt="Composition publication"
+                loading="lazy"
+              />
+              <div class="three-gallery-card__meta">
+                <strong>Overlay social</strong>
+                <span>D&eacute;clinaison multi-format</span>
+              </div>
+            </article>
+
+            <article class="three-gallery-card">
+              <img
+                src="assets/video-previews/reel-v22.jpg"
+                alt="Preview motion dynamique"
+                loading="lazy"
+              />
+              <div class="three-gallery-card__meta">
+                <strong>Motion layer</strong>
+                <span>Transitions et rythme visuel</span>
+              </div>
+            </article>
+
+            <article class="three-gallery-card three-gallery-card--wide">
+              <img
+                src="assets/expertises/modelisation-rendu-card.svg"
+                alt="Illustration 3D et rendu"
+                loading="lazy"
+              />
+              <div class="three-gallery-card__meta">
+                <strong>Univers 3D</strong>
+                <span>Volume, lumi&egrave;re et mati&egrave;res</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel section-panel reveal" id="pipeline-3d" data-panel>
+          <div class="section-block__header">
+            <div>
+              <p class="eyebrow">Pipeline</p>
+              <h2 class="section-block__title">Zone de production 3D</h2>
+            </div>
+            <p>
+              Structure pr&ecirc;te pour tes nouveaux fichiers 3D : tu peux brancher
+              ici tes futurs rendus, captures et pr&eacute;visualisations.
+            </p>
+          </div>
+
+          <div class="three-pipeline-grid">
+            <article class="three-pipeline-step" id="mode-scene">
+              <span>01</span>
+              <h3>Bloc sc&egrave;ne</h3>
+              <p>Placement cam&eacute;ra, angles et composition des plans.</p>
+            </article>
+
+            <article class="three-pipeline-step" id="mode-render">
+              <span>02</span>
+              <h3>Bloc rendu</h3>
+              <p>Textures, lumi&egrave;res, passes et export final.</p>
+            </article>
+
+            <article class="three-pipeline-step">
+              <span>03</span>
+              <h3>Bloc int&eacute;gration</h3>
+              <p>Assemblage sur supports print, web et vid&eacute;o.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="three-lab.js"></script>
+  </body>
+</html>
